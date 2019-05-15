@@ -34,14 +34,15 @@ function OrientationChanged(e)
     <div class="container">
   <div class="row">
     <div class="col-sm">
-      One of three columns
-      ioafjaojfjaofja
+      <p>One of three columns
+      ioafjaojfjaofja</p>
     </div>
     <div class="col-sm">
-      One of three columns
+    <p>One of three columns
+      afafapfa</p>
     </div>
     <div class="col-sm">
-      One of three columns
+    <p>One of three columns</p>
     </div>
   </div>
 </div>
