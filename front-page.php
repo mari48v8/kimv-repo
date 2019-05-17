@@ -28,26 +28,10 @@ function OrientationChanged(e)
 
 </script>
 
+
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-    <section>
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      <p>One of three columns
-      ioafjaojfjaofja</p>
-    </div>
-    <div class="col-sm">
-    <p>One of three columns
-      afafapfa</p>
-    </div>
-    <div class="col-sm">
-    <p>One of three columns</p>
-    </div>
-  </div>
-</div>
-</section>
-
+<p>hej mor dette er et test side for at vise sass</p>
 	
 	</main><!-- #main -->
 </div><!-- #primary -->
