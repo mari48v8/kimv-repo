@@ -11,3 +11,54 @@ body {
         background: blue;
     }
 }
+
+.nav-menu-mobile {
+    display: none;
+}
+
+/* Mobiles in Potrait mode */
+@media only screen and (max-width: 320px) {
+    .nav-menu-mobile {
+        display: block;
+
+        a {
+            border: solid;
+            padding: 5px;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+/* Mobiles in landscape mode */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .nav-menu-mobile {
+        display: block;
+
+        a {
+            border: solid;
+            padding: 5px;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+#mainlogo {
+    margin-top: 0%;
+    position: absolute;
+    top: 6.3%;
+    z-index: 4;
+    left: 5%;
+    display: block;
+}
+
+.main-nav {
+    clear: none;
+    width: 60%;
+    float: right;
+}
