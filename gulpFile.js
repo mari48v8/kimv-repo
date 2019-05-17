@@ -8,6 +8,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('default', ['sass'], function () {
+gulp.task('watch', ['sass'], function () {
     return gulp.watch('./assets/sass/**/*.scss', ['sass']);
 });

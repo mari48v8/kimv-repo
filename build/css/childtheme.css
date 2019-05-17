@@ -1,7 +1,5 @@
 body {
-  font: 100% Helvetica, sans-serif;
-}
-
-body p {
-  color: red;
-}
+  font: 100% Helvetica, sans-serif; }
+  body p {
+    color: pink;
+    background: darkgoldenrod; }
