@@ -42,3 +42,4 @@ function site_logo_callout($wp_customize) {
 }
 
 add_action('customize_register', 'site_logo_callout');
+

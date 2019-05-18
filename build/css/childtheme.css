@@ -1,8 +1,7 @@
 body {
-  font: 100% Helvetica, sans-serif; }
+  font: 100% "Open Sans", sans-serif; }
   body p {
-    color: greenyellow;
-    background: blue; }
+    color: greenyellow; }
 
 .nav-menu-mobile {
   display: none; }
@@ -39,3 +38,10 @@ body {
   clear: none;
   width: 60%;
   float: right; }
+
+#color-nav {
+  background: white;
+  width: 100%;
+  height: 14%;
+  position: absolute;
+  z-index: 2; }
