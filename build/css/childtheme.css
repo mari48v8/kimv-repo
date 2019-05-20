@@ -6,26 +6,6 @@ body {
 .nav-menu-mobile {
   display: none; }
 
-/* Mobiles in Potrait mode */
-@media only screen and (max-width: 320px) {
-  .nav-menu-mobile {
-    display: block; }
-    .nav-menu-mobile a {
-      border: solid;
-      padding: 5px; }
-  .nav-menu {
-    display: none; } }
-
-/* Mobiles in landscape mode */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-  .nav-menu-mobile {
-    display: block; }
-    .nav-menu-mobile a {
-      border: solid;
-      padding: 5px; }
-  .nav-menu {
-    display: none; } }
-
 #mainlogo {
   margin-top: 0%;
   position: absolute;
@@ -45,3 +25,151 @@ body {
   height: 14%;
   position: absolute;
   z-index: 2; }
+
+/* ------  Heading and Font Size Mixins ------ */
+/* ------  Applying Heading Mixins  ------ */
+h1 {
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 3.375em;
+  color: #333; }
+
+h2 {
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 2.966em; }
+
+h3 {
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 1.5em; }
+
+h4 {
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 1.318em; }
+
+/* ------  Clearit Mixin  ------ */
+/* ------  Grid  ------ */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: lightblue; }
+
+div[class^="col-"] {
+  border: 1px solid red;
+  padding: 1rem 0;
+  text-align: center; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+
+/* ------------  Media Quries Starts ------------ */
+/* ------------  Media Quries Responsive Menu ------------ */
+/* ------  Mobiles in Potrait ------ */
+@media only screen and (max-width: 320px) {
+  .nav-menu-mobile {
+    display: block; }
+    .nav-menu-mobile a {
+      border: solid;
+      padding: 5px; }
+  .nav-menu {
+    display: none; } }
+
+/* ------  Mobiles in Landscape ------ */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  .nav-menu-mobile {
+    display: block; }
+    .nav-menu-mobile a {
+      border: solid;
+      padding: 5px; }
+  .nav-menu {
+    display: none; } }
+
+/* ------------  Media Quries Mixins  ------------ */
+/* ------------  Media Quries Ends  ------------ */
+/* ------------  Responsive Grid  ------------ */
+.row div[class^="col-"] {
+  height: 300px;
+  zoom: 1; }
+  .row div[class^="col-"]:before, .row div[class^="col-"]:after {
+    content: "";
+    display: table; }
+  .row div[class^="col-"]:after {
+    clear: both; }
+
+@media (max-width: 599px) {
+  .row .col-6 {
+    background-color: turquoise;
+    width: 100%; }
+  .row .col-3 {
+    background-color: orangered;
+    width: 50%; }
+  .row .col-4 {
+    background-color: darkkhaki;
+    width: 50%; }
+  .row .col-8 {
+    background-color: khaki;
+    width: 50%; }
+  .row .col-12 {
+    background-color: #bdad20;
+    width: 100%; } }
+
+@media (min-width: 600px) {
+  .row .col-6 {
+    background-color: yellowgreen;
+    width: 50%; }
+  .row .col-3 {
+    background-color: orange;
+    width: 25%; }
+  .row .col-4 {
+    background-color: lightcoral;
+    width: 33.33333%; }
+  .row .col-8 {
+    background-color: navy;
+    width: 66.66667%; }
+  .row .col-12 {
+    background-color: #4f20bc;
+    width: 100%; } }
+
+@media (min-width: 1200px) {
+  .row .col-6 {
+    background-color: violet;
+    width: 50%; }
+  .row .col-3 {
+    background-color: yellow;
+    width: 25%; }
+  .row .col-4 {
+    background-color: lightgreen;
+    width: 33.33333%; }
+  .row .col-8 {
+    background-color: lightsalmon;
+    width: 66.66667%; }
+  .row .col-12 {
+    background-color: #ee17ee;
+    width: 100%; } }
+
+@media (min-width: 1800px) {
+  .row .col-6 {
+    background-color: Blue;
+    width: 50%; }
+  .row .col-3 {
+    background-color: darkmagenta;
+    width: 25%; }
+  .row .col-4 {
+    background-color: red;
+    width: 33.33333%; }
+  .row .col-8 {
+    background-color: #20bb5c;
+    width: 66.66667%; }
+  .row .col-12 {
+    background-color: #bc4420;
+    width: 100%; } }
+
+/* ------------  Responsive Grid Slut ------------ */

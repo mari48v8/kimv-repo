@@ -14,26 +14,28 @@
 
 get_header(); ?>
 
-<script>
-
-$(function()
-{
-    window.onorientationchange = OrientationChanged;
-    window.setTimeout(OrientationChanged, 0);
-}
-function OrientationChanged(e)
-{
-    $('body').css('-webkit-transform', window.orientation % 180 == 0 ? '' : 'rotate(-90deg)');
-}
-
-</script>
-
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-<p>hej mor dette er et test side for at vise sass</p>
-    
-
+	<main id="main" class="site-main clearfix" role="main">
+    <?php while ( have_posts() ) : the_post(); ?>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+              <?php the_field('add_content'); ?></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-4"></div>
+                <div class="col-8"> <?php the_field('add_content_two'); ?></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-6"><?php the_field('add_content_three'); ?></div>
+                <div class="col-6"><?php the_field('add_content_four'); ?></div>
+                <div class="col-6"></div>
+                <div class="col-12"></div>
+                <div class="col-12"></div>
+            </div> <!-- /row -->
+        </div> <!-- /container -->
+        <?php endwhile; ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
