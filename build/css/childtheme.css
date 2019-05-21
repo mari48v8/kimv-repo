@@ -1,10 +1,14 @@
 body {
-  font: 100% "Open Sans", sans-serif; }
+  font: 100% "Open Sans", sans-serif;
+  background: #fff; }
   body p {
-    color: greenyellow; }
+    color: #333; }
 
 .nav-menu-mobile {
   display: none; }
+
+img {
+  width: 100%; }
 
 #mainlogo {
   margin-top: 0%;
@@ -63,7 +67,6 @@ h4 {
 
 div[class^="col-"] {
   border: 1px solid red;
-  padding: 1rem 0;
   text-align: center; }
 
 .row {
@@ -96,7 +99,7 @@ div[class^="col-"] {
 /* ------------  Media Quries Ends  ------------ */
 /* ------------  Responsive Grid  ------------ */
 .row div[class^="col-"] {
-  height: 300px;
+  /*height: 380px;*/
   zoom: 1; }
   .row div[class^="col-"]:before, .row div[class^="col-"]:after {
     content: "";
@@ -106,17 +109,16 @@ div[class^="col-"] {
 
 @media (max-width: 599px) {
   .row .col-6 {
-    background-color: turquoise;
-    width: 100%; }
+    background-color: turquoise; }
   .row .col-3 {
     background-color: orangered;
     width: 50%; }
   .row .col-4 {
     background-color: darkkhaki;
-    width: 50%; }
+    width: 100%; }
   .row .col-8 {
     background-color: khaki;
-    width: 50%; }
+    width: 100%; }
   .row .col-12 {
     background-color: #bdad20;
     width: 100%; } }
@@ -139,12 +141,19 @@ div[class^="col-"] {
     width: 100%; } }
 
 @media (min-width: 1200px) {
+  .row .col-2 {
+    width: auto;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%; }
   .row .col-6 {
     background-color: violet;
     width: 50%; }
   .row .col-3 {
-    background-color: yellow;
+    background-color: #f2f2f2;
     width: 25%; }
+    .row .col-3:nth-child(odd) {
+      background: #e0e0e0; }
   .row .col-4 {
     background-color: lightgreen;
     width: 33.33333%; }
@@ -173,3 +182,45 @@ div[class^="col-"] {
     width: 100%; } }
 
 /* ------------  Responsive Grid Slut ------------ */
+.r1 {
+  position: absolute;
+  width: 23%;
+  margin-top: 25%;
+  margin-left: 28%; }
+
+hr {
+  width: 10%;
+  background: #333; }
+
+.p4 {
+  padding: 4%; }
+
+.p-unik {
+  padding-top: 4%;
+  padding-left: 18%;
+  padding-right: 5%;
+  padding-bottom: 3%; }
+
+.p-unik-2 {
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 4%; }
+
+.add {
+  width: 74%;
+  margin: 0px auto; }
+
+/* ------------  Instagram feed ------------ */
+.custom-menu-class {
+  position: absolute;
+  z-index: 2;
+  background: white; }
+
+.custom-menu-class ul {
+  list-style-type: none;
+  list-style: none;
+  list-style-image: none; }
+
+.custom-menu-class li {
+  padding: 20px;
+  display: inline; }

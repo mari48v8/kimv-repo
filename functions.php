@@ -43,3 +43,42 @@ function site_logo_callout($wp_customize) {
 
 add_action('customize_register', 'site_logo_callout');
 
+// Add Intro Section To Admin Customizer Screen 
+
+
+function frontpage_imgs_callout($wp_customize) {
+    $wp_customize->add_section('frontpage-imgs-callout-section', array(
+        'title' => 'Frontpage Images'
+    ));
+
+    $wp_customize->add_setting('frontpage-imgs-callout-display', array(
+        "default" => 'No'
+    ));
+    
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize,'frontpage_imgs_callout_display_control', array(
+    'label' => 'Display this section',
+    'section' => 'frontpage-imgs-callout-section',
+    'settings' => 'frontpage-imgs-callout-display',
+    'type' => 'select',
+    'choices' => array('No' => 'No', 'Yes' => 'Yes')
+    )));
+    
+    $wp_customize->add_setting('frontpage_imgs_callout_one');
+    
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control($wp_customize,'frontpage_imgs_callout_one_control', array(
+    'label' => 'Image',
+    'section' => 'frontpage-imgs-callout-section',
+    'settings' => 'frontpage-imgs-callout-display',
+    'width' => 199, 
+    'height' => 67
+    )));
+   
+}
+
+add_action('customize_register', 'frontpage_imgs_callout');
+
+
+function wpb_custom_new_menu() {
+    register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+  }
+  add_action( 'init', 'wpb_custom_new_menu' );

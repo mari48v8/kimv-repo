@@ -1,151 +1,149 @@
-$font-stack:'Open Sans',
-sans-serif;
-
+$font-stack: "Open Sans", sans-serif;
 
 body {
-    font: 100% $font-stack;
-
-
-    p {
-        color: greenyellow;
-    }
+  font: 100% $font-stack;
+  background: #fff;
+  p {
+    color: #333;
+  }
 }
 
 .nav-menu-mobile {
-    display: none;
+  display: none;
+}
+
+img {
+  width: 100%;
 }
 
 #mainlogo {
-    margin-top: 0%;
-    position: absolute;
-    top: 6.3%;
-    z-index: 4;
-    left: 5%;
-    display: block;
+  margin-top: 0%;
+  position: absolute;
+  top: 6.3%;
+  z-index: 4;
+  left: 5%;
+  display: block;
 }
 
 .main-nav {
-    clear: none;
-    width: 60%;
-    float: right;
+  clear: none;
+  width: 60%;
+  float: right;
 }
 
 #color-nav {
-    background: white;
-    width: 100%;
-    height: 14%;
-    position: absolute;
-    z-index: 2;
+  background: white;
+  width: 100%;
+  height: 14%;
+  position: absolute;
+  z-index: 2;
 }
 
 /* ------  Heading and Font Size Mixins ------ */
 
 @mixin heading {
-    margin-bottom: 0.35em;
-    line-height: 1.2;
-    color: inherit;
+  margin-bottom: 0.35em;
+  line-height: 1.2;
+  color: inherit;
 
-    a {}
+  a {
+  }
 }
 
 @mixin heading-1 {
-    @include heading;
-    font-size: 3.375em;
-    color: #333;
+  @include heading;
+  font-size: 3.375em;
+  color: #333;
 }
 
 @mixin heading-2 {
-    @include heading;
-    font-size: 2.966em;
+  @include heading;
+  font-size: 2.966em;
 }
 
 @mixin heading-3 {
-    @include heading;
-    font-size: 1.5em;
+  @include heading;
+  font-size: 1.5em;
 }
 
 @mixin heading-4 {
-    @include heading;
-    font-size: 1.318em;
+  @include heading;
+  font-size: 1.318em;
 }
 
 @mixin heading-5 {
-    @include heading;
-    font-size: 1em;
+  @include heading;
+  font-size: 1em;
 }
 
 @mixin heading-6 {
-    @include heading;
-    font-size: 0.875em;
+  @include heading;
+  font-size: 0.875em;
 }
 
 /* ------  Applying Heading Mixins  ------ */
 
 h1 {
-    @include heading-1;
+  @include heading-1;
 }
 
 h2 {
-    @include heading-2;
+  @include heading-2;
 }
 
 h3 {
-    @include heading-3;
+  @include heading-3;
 }
 
 h4 {
-    @include heading-4;
+  @include heading-4;
 }
 
 /* ------  Clearit Mixin  ------ */
 
 @mixin clearit {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
 
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
+  &:after {
+    clear: both;
+  }
 
-    &:after {
-        clear: both;
-    }
-
-    zoom: 1;
+  zoom: 1;
 }
 
 /* ------  Grid  ------ */
 
 .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    background: lightblue;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: lightblue;
 }
 
 div[class^="col-"] {
-    border: 1px solid red;
-    padding: 1rem 0;
-    text-align: center;
+  border: 1px solid red;
+  text-align: center;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    // $columns: 12;
+  // $columns: 12;
 
-    // @for $i from 1 through $columns {
-    //     .col-#{$i} {
-    //         flex: 0 0 100% / $columns * $i
-    //     }
+  // @for $i from 1 through $columns {
+  //     .col-#{$i} {
+  //         flex: 0 0 100% / $columns * $i
+  //     }
 
-    //     .col-offset-#{$i} {
-    //         margin-left: 100% / $columns * $i
-    //     }
-    // }
-
-
+  //     .col-offset-#{$i} {
+  //         margin-left: 100% / $columns * $i
+  //     }
+  // }
 }
 
 /* ------------  Media Quries Starts ------------ */
@@ -154,190 +152,246 @@ div[class^="col-"] {
 
 /* ------  Mobiles in Potrait ------ */
 @media only screen and (max-width: 320px) {
-    .nav-menu-mobile {
-        display: block;
+  .nav-menu-mobile {
+    display: block;
 
-        a {
-            border: solid;
-            padding: 5px;
-        }
+    a {
+      border: solid;
+      padding: 5px;
     }
+  }
 
-    .nav-menu {
-        display: none;
-    }
+  .nav-menu {
+    display: none;
+  }
 }
-
 
 /* ------  Mobiles in Landscape ------ */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
-    .nav-menu-mobile {
-        display: block;
+  .nav-menu-mobile {
+    display: block;
 
-        a {
-            border: solid;
-            padding: 5px;
-        }
+    a {
+      border: solid;
+      padding: 5px;
     }
+  }
 
-    .nav-menu {
-        display: none;
-    }
+  .nav-menu {
+    display: none;
+  }
 }
 
 /* ------------  Media Quries Mixins  ------------ */
 
 @mixin for-size($size) {
-    @if $size==phone-only {
-        @media (max-width: 599px) {
-            @content;
-        }
+  @if $size==phone-only {
+    @media (max-width: 599px) {
+      @content;
     }
-
-    @else if $size==tablet-portrait-up {
-        @media (min-width: 600px) {
-            @content;
-        }
+  } @else if $size==tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
     }
-
-    @else if $size==tablet-landscape-up {
-        @media (min-width: 900px) {
-            @content;
-        }
+  } @else if $size==tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
     }
-
-    @else if $size==desktop-up {
-        @media (min-width: 1200px) {
-            @content;
-        }
+  } @else if $size==desktop-up {
+    @media (min-width: 1200px) {
+      @content;
     }
-
-    @else if $size==big-desktop-up {
-        @media (min-width: 1800px) {
-            @content;
-        }
+  } @else if $size==big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
     }
+  }
 }
 
 /* ------------  Media Quries Ends  ------------ */
 
 /* ------------  Responsive Grid  ------------ */
+@mixin odd() {
+  &:nth-child(odd) {
+    @content;
+  }
+}
 
 .row {
-    div[class^="col-"] {
-        height: 300px;
-        @include clearit
+  div[class^="col-"] {
+    /*height: 380px;*/
+    @include clearit;
+  }
+
+  @include for-size(phone-only) {
+    .col-6 {
+      background-color: turquoise;
     }
 
-    @include for-size(phone-only) {
-        .col-6 {
-            background-color: turquoise;
-            width: 100%;
-
-        }
-
-        .col-3 {
-            background-color: orangered;
-            width: 50%;
-        }
-
-        .col-4 {
-            background-color: darkkhaki;
-            width: 50%;
-        }
-
-        .col-8 {
-            background-color: khaki;
-            width: 50%;
-        }
-
-        .col-12 {
-            background-color: #bdad20;
-            width: 100%;
-        }
+    .col-3 {
+      background-color: orangered;
+      width: 50%;
     }
 
-    @include for-size(tablet-portrait-up) {
-        .col-6 {
-            background-color: yellowgreen;
-            width: 50%;
-        }
-
-        .col-3 {
-            background-color: orange;
-            width: 25%;
-        }
-
-        .col-4 {
-            background-color: lightcoral;
-            width: 33.33333%;
-        }
-
-        .col-8 {
-            background-color: navy;
-            width: 66.66667%;
-        }
-
-        .col-12 {
-            background-color: hsl(258, 71%, 43%);
-            width: 100%;
-        }
+    .col-4 {
+      background-color: darkkhaki;
+      width: 100%;
     }
 
-    @include for-size(desktop-up) {
-        .col-6 {
-            background-color: violet;
-            width: 50%;
-        }
-
-        .col-3 {
-            background-color: yellow;
-            width: 25%;
-        }
-
-        .col-4 {
-            background-color: lightgreen;
-            width: 33.33333%;
-        }
-
-        .col-8 {
-            background-color: lightsalmon;
-            width: 66.66667%;
-        }
-
-        .col-12 {
-            background-color: #ee17ee;
-            width: 100%;
-        }
+    .col-8 {
+      background-color: khaki;
+      width: 100%;
     }
 
-    @include for-size(big-desktop-up) {
-        .col-6 {
-            background-color: Blue;
-            width: 50%;
-        }
+    .col-12 {
+      background-color: #bdad20;
+      width: 100%;
+    }
+  }
 
-        .col-3 {
-            background-color: darkmagenta;
-            width: 25%;
-        }
-
-        .col-4 {
-            background-color: red;
-            width: 33.33333%;
-        }
-
-        .col-8 {
-            background-color: #20bb5c;
-            width: 66.66667%;
-        }
-
-        .col-12 {
-            background-color: hsl(14, 71%, 43%);
-            width: 100%;
-        }
+  @include for-size(tablet-portrait-up) {
+    .col-6 {
+      background-color: yellowgreen;
+      width: 50%;
     }
 
+    .col-3 {
+      background-color: orange;
+      width: 25%;
+    }
+
+    .col-4 {
+      background-color: lightcoral;
+      width: 33.33333%;
+    }
+
+    .col-8 {
+      background-color: navy;
+      width: 66.66667%;
+    }
+
+    .col-12 {
+      background-color: hsl(258, 71%, 43%);
+      width: 100%;
+    }
+  }
+
+  @include for-size(desktop-up) {
+    .col-2 {
+      width: auto;
+      padding: 1%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+
+    .col-6 {
+      background-color: violet;
+      width: 50%;
+    }
+
+    .col-3 {
+      background-color: #f2f2f2;
+      width: 25%;
+      @include odd() {
+        background: #e0e0e0;
+      }
+    }
+
+    .col-4 {
+      background-color: lightgreen;
+      width: 33.33333%;
+    }
+
+    .col-8 {
+      background-color: lightsalmon;
+      width: 66.66667%;
+    }
+
+    .col-12 {
+      background-color: #ee17ee;
+      width: 100%;
+    }
+  }
+
+  @include for-size(big-desktop-up) {
+    .col-6 {
+      background-color: Blue;
+      width: 50%;
+    }
+
+    .col-3 {
+      background-color: darkmagenta;
+      width: 25%;
+    }
+
+    .col-4 {
+      background-color: red;
+      width: 33.33333%;
+    }
+
+    .col-8 {
+      background-color: #20bb5c;
+      width: 66.66667%;
+    }
+
+    .col-12 {
+      background-color: hsl(14, 71%, 43%);
+      width: 100%;
+    }
+  }
 }
 
 /* ------------  Responsive Grid Slut ------------ */
+
+.r1 {
+  position: absolute;
+  width: 23%;
+  margin-top: 25%;
+  margin-left: 28%;
+}
+
+hr {
+  width: 10%;
+  background: #333;
+}
+
+@mixin only() {
+  &:only-child {
+    @content;
+  }
+}
+
+.p4 {
+  padding: 4%;
+}
+.p-unik {
+  padding-top: 4%;
+  padding-left: 18%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+}
+.p-unik-2 {
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.add {
+  width: 74%;
+  margin: 0px auto;
+}
+
+/* ------------  Instagram feed ------------ */
+.custom-menu-class {
+  position: absolute;
+  z-index: 2;
+  background: white;
+}
+.custom-menu-class ul {
+  list-style-type: none;
+  list-style: none;
+  list-style-image: none;
+}
+.custom-menu-class li {
+  padding: 20px;
+  display: inline;
+}
