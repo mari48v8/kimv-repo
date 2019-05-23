@@ -62,11 +62,10 @@ h4 {
 .container {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  background: lightblue; }
+  margin: 0 auto; }
 
 div[class^="col-"] {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   text-align: center; }
 
 .row {
@@ -98,6 +97,14 @@ div[class^="col-"] {
 /* ------------  Media Quries Mixins  ------------ */
 /* ------------  Media Quries Ends  ------------ */
 /* ------------  Responsive Grid  ------------ */
+.site-footer {
+  background-color: #000;
+  color: #fff; }
+
+.bbg {
+  background: #000;
+  color: #fff; }
+
 .row div[class^="col-"] {
   /*height: 380px;*/
   zoom: 1; }
@@ -125,8 +132,15 @@ div[class^="col-"] {
 
 @media (min-width: 600px) {
   .row .col-6 {
-    background-color: yellowgreen;
     width: 50%; }
+    .row .col-6 li:nth-child(4n+1) {
+      background: white; }
+    .row .col-6 li:nth-child(4n+2) {
+      background: white; }
+    .row .col-6 li:nth-child(4n+3) {
+      background: #333333; }
+    .row .col-6 li:nth-child(4n+4) {
+      background: white; }
   .row .col-3 {
     background-color: orange;
     width: 25%; }
@@ -143,12 +157,19 @@ div[class^="col-"] {
 @media (min-width: 1200px) {
   .row .col-2 {
     width: auto;
-    padding: 1%;
+    padding: 2%;
     margin-top: 2%;
     margin-bottom: 2%; }
   .row .col-6 {
-    background-color: violet;
     width: 50%; }
+    .row .col-6 li:nth-child(4n+1) {
+      background: white; }
+    .row .col-6 li:nth-child(4n+2) {
+      background: white; }
+    .row .col-6 li:nth-child(4n+3) {
+      background: #333333; }
+    .row .col-6 li:nth-child(4n+4) {
+      background: white; }
   .row .col-3 {
     background-color: #f2f2f2;
     width: 25%; }
@@ -158,7 +179,7 @@ div[class^="col-"] {
     background-color: lightgreen;
     width: 33.33333%; }
   .row .col-8 {
-    background-color: lightsalmon;
+    background-color: #fff;
     width: 66.66667%; }
   .row .col-12 {
     background-color: #ee17ee;
@@ -182,6 +203,9 @@ div[class^="col-"] {
     width: 100%; } }
 
 /* ------------  Responsive Grid Slut ------------ */
+#content {
+  padding: 0; }
+
 .r1 {
   position: absolute;
   width: 23%;
@@ -206,21 +230,109 @@ hr {
   padding-left: 4%;
   padding-right: 4%; }
 
+.p-unik-3 {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%; }
+
 .add {
-  width: 74%;
+  width: 83%;
   margin: 0px auto; }
 
-/* ------------  Instagram feed ------------ */
-.custom-menu-class {
-  position: absolute;
-  z-index: 2;
-  background: white; }
+/* ------------  Nav Icons  ------------ */
+#logo {
+  width: 18%;
+  margin-top: -8%;
+  position: fixed;
+  margin-left: 2%; }
 
-.custom-menu-class ul {
-  list-style-type: none;
-  list-style: none;
-  list-style-image: none; }
+#instagram {
+  width: 1.5%;
+  margin-top: -6.2%;
+  margin-right: 25%;
+  float: right; }
 
-.custom-menu-class li {
-  padding: 20px;
-  display: inline; }
+#telefon {
+  width: 1.5%;
+  margin-top: -6.2%;
+  margin-right: 21%;
+  float: right; }
+
+#teletext {
+  width: 8%;
+  margin-top: -5.9%;
+  float: right;
+  margin-right: 12.5%;
+  font-weight: 600; }
+
+.custom-logo {
+  margin-left: 63%;
+  margin-top: 20%; }
+
+@media screen and (min-width: 48em) {
+  .custom-logo-link img {
+    max-width: 700px; } }
+
+.custom-logo-link img {
+  /* display: inline-block; */
+  max-height: 160px;
+  /* width: auto; */ }
+
+/* ------------  Responsive Menu Styling  ------------ */
+.primary-navigation {
+  z-index: 3000;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.panel {
+  position: fixed;
+  right: -15.625em;
+  width: 15.625em;
+  background: #222; }
+
+.push {
+  position: relative; }
+
+.nav-menu ul {
+  padding-left: 25%;
+  background: white;
+  height: 100px; }
+
+.nav-menu ul li {
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  margin-top: 35px; }
+
+.nav-menu ul li a {
+  font-weight: 700;
+  font-size: 0.9em; }
+
+.menu-link {
+  display: none;
+  color: #fff;
+  background: #333;
+  border-radius: 4px;
+  padding: 2px 12px;
+  float: right; }
+
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  padding: 10px 15px; }
+
+.mobile-menu a:hover {
+  background-color: #555; }
+
+.mobile-menu li {
+  border-bottom: 1px #444 solid;
+  list-style: none; }
+
+@media only screen and (max-width: 900px) {
+  #primary-menu {
+    display: none; }
+  .mobile-menu #primary-menu {
+    display: block; }
+  .menu-link {
+    display: inline-block; } }

@@ -1,3 +1,4 @@
+<?php /* Template Name: OmMigPage */ ?>
 <?php
 /**
  * The template for displaying all pages
@@ -20,6 +21,8 @@ get_header(); ?>
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+		<h1>Det her er en tester</h1>
 
 			<?php
 			while ( have_posts() ) :

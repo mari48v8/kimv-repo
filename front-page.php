@@ -14,6 +14,11 @@
 
 get_header(); ?>
 
+<style>
+.wrap {
+		max-width: 1404px;
+	}
+</style>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main clearfix" role="main">
@@ -77,7 +82,7 @@ get_header(); ?>
                     <img class="col-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
-                <div class="col-6 p4"><?php the_field('add_content_three'); ?></div>
+                <div class="col-6 p4 bbg"><?php the_field('add_content_three'); ?></div>
                 <div class="col-6 p-unik-2"><?php the_field('add_content_four'); ?></div>
                 <?php 
 

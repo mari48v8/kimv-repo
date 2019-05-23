@@ -1,8 +1,10 @@
-$font-stack: "Open Sans", sans-serif;
+$font-stack: "Open Sans",
+sans-serif;
 
 body {
   font: 100% $font-stack;
   background: #fff;
+
   p {
     color: #333;
   }
@@ -46,8 +48,7 @@ img {
   line-height: 1.2;
   color: inherit;
 
-  a {
-  }
+  a {}
 }
 
 @mixin heading-1 {
@@ -102,6 +103,7 @@ h4 {
 /* ------  Clearit Mixin  ------ */
 
 @mixin clearit {
+
   &:before,
   &:after {
     content: "";
@@ -121,11 +123,10 @@ h4 {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  background: lightblue;
 }
 
 div[class^="col-"] {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   text-align: center;
 }
 
@@ -189,19 +190,27 @@ div[class^="col-"] {
     @media (max-width: 599px) {
       @content;
     }
-  } @else if $size==tablet-portrait-up {
+  }
+
+  @else if $size==tablet-portrait-up {
     @media (min-width: 600px) {
       @content;
     }
-  } @else if $size==tablet-landscape-up {
+  }
+
+  @else if $size==tablet-landscape-up {
     @media (min-width: 900px) {
       @content;
     }
-  } @else if $size==desktop-up {
+  }
+
+  @else if $size==desktop-up {
     @media (min-width: 1200px) {
       @content;
     }
-  } @else if $size==big-desktop-up {
+  }
+
+  @else if $size==big-desktop-up {
     @media (min-width: 1800px) {
       @content;
     }
@@ -211,10 +220,37 @@ div[class^="col-"] {
 /* ------------  Media Quries Ends  ------------ */
 
 /* ------------  Responsive Grid  ------------ */
+
+$black:#000;
+$white:#fff;
+
+.site-footer {
+  background-color: $black;
+  color: $white;
+}
+
+$colors: white,
+white,
+black,
+white;
+
+@mixin columnscolors {
+  @for $i from 1 through length($colors) {
+    li:nth-child(#{length($colors)}n+#{$i}) {
+      background: lighten(nth($colors, $i), 20%);
+    }
+  }
+}
+
 @mixin odd() {
   &:nth-child(odd) {
     @content;
   }
+}
+
+.bbg {
+  background: $black;
+  color: $white;
 }
 
 .row {
@@ -251,7 +287,7 @@ div[class^="col-"] {
 
   @include for-size(tablet-portrait-up) {
     .col-6 {
-      background-color: yellowgreen;
+      @include columnscolors;
       width: 50%;
     }
 
@@ -279,19 +315,20 @@ div[class^="col-"] {
   @include for-size(desktop-up) {
     .col-2 {
       width: auto;
-      padding: 1%;
+      padding: 2%;
       margin-top: 2%;
       margin-bottom: 2%;
     }
 
     .col-6 {
-      background-color: violet;
       width: 50%;
+      @include columnscolors;
     }
 
     .col-3 {
       background-color: #f2f2f2;
       width: 25%;
+
       @include odd() {
         background: #e0e0e0;
       }
@@ -303,8 +340,9 @@ div[class^="col-"] {
     }
 
     .col-8 {
-      background-color: lightsalmon;
+      background-color: $white;
       width: 66.66667%;
+
     }
 
     .col-12 {
@@ -343,6 +381,10 @@ div[class^="col-"] {
 
 /* ------------  Responsive Grid Slut ------------ */
 
+#content {
+  padding: 0;
+}
+
 .r1 {
   position: absolute;
   width: 23%;
@@ -364,34 +406,152 @@ hr {
 .p4 {
   padding: 4%;
 }
+
 .p-unik {
   padding-top: 4%;
   padding-left: 18%;
   padding-right: 5%;
   padding-bottom: 3%;
 }
+
 .p-unik-2 {
   padding-top: 8%;
   padding-left: 4%;
   padding-right: 4%;
 }
+
+.p-unik-3 {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
 .add {
-  width: 74%;
+  width: 83%;
   margin: 0px auto;
 }
 
-/* ------------  Instagram feed ------------ */
-.custom-menu-class {
-  position: absolute;
-  z-index: 2;
+/* ------------  Nav Icons  ------------ */
+
+#logo {
+  width: 18%;
+  margin-top: -8%;
+  position: fixed;
+  margin-left: 2%;
+}
+
+#instagram {
+  width: 1.5%;
+  margin-top: -6.2%;
+  margin-right: 25%;
+  float: right;
+}
+
+#telefon {
+  width: 1.5%;
+  margin-top: -6.2%;
+  margin-right: 21%;
+  float: right;
+}
+
+#teletext {
+  width: 8%;
+  margin-top: -5.9%;
+  float: right;
+  margin-right: 12.5%;
+  font-weight: 600;
+}
+
+.custom-logo {
+  margin-left: 63%;
+  margin-top: 20%;
+}
+
+@media screen and (min-width: 48em) {
+  .custom-logo-link img {
+    max-width: 700px;
+  }
+}
+
+.custom-logo-link img {
+  /* display: inline-block; */
+  max-height: 160px;
+  /* width: auto; */
+}
+
+/* ------------  Responsive Menu Styling  ------------ */
+
+.primary-navigation {
+  z-index: 3000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.panel {
+  position: fixed;
+  right: -15.625em;
+  width: 15.625em;
+  background: #222;
+}
+
+.push {
+  position: relative;
+}
+
+.nav-menu ul {
+  padding-left: 25%;
   background: white;
+  height: 100px;
 }
-.custom-menu-class ul {
-  list-style-type: none;
+
+.nav-menu ul li {
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  margin-top: 35px;
+}
+
+.nav-menu ul li a {
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.menu-link {
+  display: none;
+  color: #fff;
+  background: #333;
+  border-radius: 4px;
+  padding: 2px 12px;
+  float: right;
+}
+
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.mobile-menu a:hover {
+  background-color: #555;
+}
+
+.mobile-menu li {
+  border-bottom: 1px #444 solid;
   list-style: none;
-  list-style-image: none;
 }
-.custom-menu-class li {
-  padding: 20px;
-  display: inline;
+
+@media only screen and (max-width:900px) {
+
+  #primary-menu {
+    display: none;
+  }
+
+  .mobile-menu #primary-menu {
+    display: block;
+  }
+
+  .menu-link {
+    display: inline-block;
+  }
 }
