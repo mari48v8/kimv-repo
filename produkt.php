@@ -53,28 +53,50 @@ div#slider figure {
 			<div class="container">
 				<div class="row">  
        
-        <?php 
-        $slider1=get_field("slider_1");
-        $slider2=get_field("slider_2");
-        $slider3=get_field("slider_3");        
-        ?>
-
-
         <!-- Place somewhere in the <body> of your page -->
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-              <img src="<?php echo $slider1; ?>">
-              </li>
-              <li>
-              <img src="<?php echo $slider2; ?>">
-              </li>
-              <li>
-              img src="<?php echo $slider2; ?>">
-              </li>
-            </ul>
-          </div>
 
+        <div id="slider">
+      <div class="slider-container">
+        <!-- Start Slides -->
+          <div id="slides">
+            <div class="slide">
+            <?php 
+
+            $image = get_field('slider_1');
+
+            if( !empty($image) ): ?>
+
+              <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+            <?php endif; ?>
+            </div>
+              <div class="slide">
+              <?php 
+
+              $image = get_field('slider_1');
+
+              if( !empty($image) ): ?>
+
+                <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+              <?php endif; ?>
+              </div>
+                <div class="slide">
+                <?php 
+
+            $image = get_field('slider_1');
+
+            if( !empty($image) ): ?>
+
+              <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+            <?php endif; ?>
+                </div>
+                    </div> 
+                </div>   
+          </div>   
+
+      
 
           </div> <!-- /row -->
         </div> <!-- /container -->
