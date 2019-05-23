@@ -53,7 +53,7 @@
        menu: '.mobile-menu',
        speed: 300,
        side:"right",
-      easyClose:true});</script>
+	  easyClose:true});</script>
 
 </body>
 </html>

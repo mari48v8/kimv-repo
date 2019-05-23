@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: KontaktPage
+Template Name: Produkt
 */
 get_header(); ?>
 
@@ -16,25 +16,34 @@ get_header(); ?>
 .custom-header{
 	display:none;
 }
-.bbg{
-	background:#000;
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
 }
-.googlemap-responsive{
-		overflow: hidden;
-    padding-bottom: 123.25%;
-    position: relative;
-    height: 0;
-		margin-top: -3.5%;
-		margin-left: 4%;
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
 }
-.googlemap-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
+
 </style>
+
 
 <div class="wrap">
 	<div id="primary" class="content-area">
@@ -42,28 +51,34 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			
 			<div class="container">
-				<div class="row">
-				<div class="col-6 p-unik-3"><?php the_field('add_content'); ?></div>
+				<div class="row">  
+       
+        <?php 
+        $slider1=get_field("slider_1");
+        $slider2=get_field("slider_2");
+        $slider3=get_field("slider_3");        
+        ?>
 
-					<?php 
 
-					$image = get_field('image_one');
+        <!-- Place somewhere in the <body> of your page -->
+          <div class="flexslider">
+            <ul class="slides">
+              <li>
+              <img src="<?php echo $slider1; ?>">
+              </li>
+              <li>
+              <img src="<?php echo $slider2; ?>">
+              </li>
+              <li>
+              img src="<?php echo $slider2; ?>">
+              </li>
+            </ul>
+          </div>
 
-					if( !empty($image) ): ?>
 
-						<img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-					<?php endif; ?>
-
-			
-					<div class="col-6"><?php the_field('add_content_two'); ?></div>
-
-				<div class="col-6" style="margin-bottom:4%;">
-				<img id="contact-img" src="http://localhost/kimv_wp/wp-content/uploads/2019/05/kimv_logo-1.png">
-				<?php echo do_shortcode( '[contact-form-7 id="289" title="Contact form 1"]' ); ?></div>
-				</div> <!-- /row -->
-			</div> <!-- /container -->
-		<?php endwhile; ?>
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+	  	<?php endwhile; ?>
 
     <?php
       // Get each of our panels and show the post data.
@@ -90,5 +105,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 
+
 <?php
 get_footer();
+
+
