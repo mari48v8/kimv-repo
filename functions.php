@@ -77,6 +77,38 @@ function frontpage_imgs_callout($wp_customize) {
 
 add_action('customize_register', 'frontpage_imgs_callout');
 
+// Add How It Works Callout Section To Admin Customizer Screen 
+
+function tawy_hiw_callout($wp_customize) {
+    $wp_customize->add_section('tawy-hiw-callout-section', array(
+        'title' => 'How It Works Section'
+    ));
+
+    $wp_customize->add_setting('tawy-hiw-callout-display', array(
+        "default" => 'No'
+    ));
+    
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize,'tawy_hiw_callout_display_control', array(
+    'label' => 'Display this section',
+    'section' => 'tawy-hiw-callout-section',
+    'settings' => 'tawy-hiw-callout-display',
+    'type' => 'select',
+    'choices' => array('No' => 'No', 'Yes' => 'Yes')
+    )));
+
+    $wp_customize->add_setting('tawy-hiw-callout-image');
+
+    $wp_customize->add_control( new WP_Customize_Cropped_Image_Control($wp_customize,'tawy_hiw_callout_image_control', array(
+    'label' => 'Image',
+    'section' => 'tawy-hiw-callout-section',
+    'settings' => 'tawy-hiw-callout-image',
+    'width' => 1443, 
+    'height' => 680
+    )));
+}
+
+add_action('customize_register', 'tawy_hiw_callout');
+
 
 function wpb_custom_new_menu() {
     register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));

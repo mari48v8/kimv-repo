@@ -5,45 +5,14 @@ Template Name: Produkt
 get_header(); ?>
 
 <style>
-.wrap{
-	width:100%;
-}
-#primary {
-  width: 102%;
-  margin-left:-2%;
-  margin-top:3%;
-}
-.custom-header{
-	display:none;
+.site-branding {
+  display: none;
 }
 
-@keyframes slidy {
-0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }
+.home .site-branding {
+  display: inherit;
 }
-
-body { margin: 0; } 
-div#slider { overflow: hidden; }
-div#slider figure img { width: 20%; float: left; }
-div#slider figure { 
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 30s slidy infinite; 
-}
-
 </style>
-
 
 <div class="wrap">
 	<div id="primary" class="content-area">
@@ -54,49 +23,9 @@ div#slider figure {
 				<div class="row">  
        
         <!-- Place somewhere in the <body> of your page -->
-
-        <div id="slider">
-      <div class="slider-container">
-        <!-- Start Slides -->
-          <div id="slides">
-            <div class="slide">
-            <?php 
-
-            $image = get_field('slider_1');
-
-            if( !empty($image) ): ?>
-
-              <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-            <?php endif; ?>
-            </div>
-              <div class="slide">
-              <?php 
-
-              $image = get_field('slider_1');
-
-              if( !empty($image) ): ?>
-
-                <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-              <?php endif; ?>
-              </div>
-                <div class="slide">
-                <?php 
-
-            $image = get_field('slider_1');
-
-            if( !empty($image) ): ?>
-
-              <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-            <?php endif; ?>
-                </div>
-                    </div> 
-                </div>   
-          </div>   
-
-      
+        <?php
+        echo do_shortcode('[smartslider3 slider=2]');
+        ?>
 
           </div> <!-- /row -->
         </div> <!-- /container -->

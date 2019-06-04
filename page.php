@@ -1,43 +1,40 @@
-<?php /* Template Name: OmMigPage */ ?>
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+/*
+Template Name: Produkt Page
+*/
 
 get_header(); ?>
+
+<style>
+
+.wrap{
+	width:100%;
+}
+
+.site-branding {
+  display: none;
+}
+
+.home .site-branding {
+  display: inherit;
+}
+</style>
 
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		  
+		<?php if (get_theme_mod('tawy-hiw-callout-display') == "Yes") { ?>
+			<div class="hiw-callout-image">
+			<img class="section-images" src="<?php echo wp_get_attachment_url(get_theme_mod('tawy-hiw-callout-image'))?>">
+			</div>
+		<?php } ?>
 
-		<h1>Det her er en tester</h1>
-
-			<?php
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/page/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-
+			<div id="gallery-wrapper">
+						<?php
+						if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '331' ); }
+						?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
