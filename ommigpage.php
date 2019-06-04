@@ -39,7 +39,11 @@ get_header(); ?>
 
 				<?php endif; ?>
 				<div class="col-6 p-unik-3"><?php the_field('add_content'); ?></div>
-				<div class="col-6 p-unik-3 bbg"><?php the_field('add_content_two'); ?></div>
+				<div class="col-6 p-unik-3 bbg"><?php the_field('add_content_two'); ?>
+			
+				<button style="color:#fff; border:1px solid #fff; background-color:#000; margin-top: 5%;" onclick="window.location.href='http://localhost/kimv_wp/ringe?preview_id=329&preview_nonce=1a2f6f0bf1&_thumbnail_id=-1&preview=true'">Se CV</button>
+				</div>
+
 				<?php 
 
 				$image = get_field('image_two');
@@ -58,7 +62,9 @@ get_header(); ?>
 					<img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 				<?php endif; ?>
-				<div class="col-6 p-unik-3"><?php the_field('add_content_three'); ?></div>
+				<div class="col-6 p-unik-3"><?php the_field('add_content_three'); ?>
+			  <button style="margin-top:3%;" onclick="window.location.href='https://www.vestergaardaesker.dk/'">wwww.vestergaardaesker.dk</button>
+			  </div>
 				<div class="col-6"></div>
 				</div> <!-- /row -->
 			</div> <!-- /container -->

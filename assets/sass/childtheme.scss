@@ -513,6 +513,39 @@ div.site-branding {
   margin-right: auto;
 }
 
+.gphotos {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 7%;
+}
+
+.produkt-tainer {
+  width: 75%;
+  padding-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.pg {
+  padding-top: 0%;
+}
+
+.prg {
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 5%;
+  width: 70%;
+
+}
+
+#metaslider_container_471 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+
 /* ------------  Responsive Menu Styling  ------------ */
 
 .primary-navigation {
@@ -632,6 +665,10 @@ div.site-branding {
 
   .primary-navigation {
     top: -23px;
+  }
+
+  .produkt-tainer {
+    width: 100%;
   }
 
   #gallery-wrapper {
