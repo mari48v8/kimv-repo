@@ -256,7 +256,7 @@ hr {
   display: inline-block; }
 
 div.site-branding {
-  margin-bottom: 188px !important; }
+  margin-bottom: 130px !important; }
 
 #contact-img {
   width: 53%;
@@ -283,11 +283,11 @@ div.site-branding {
 
 @media screen and (min-width: 48em) {
   .custom-logo-link img {
-    max-width: 700px; } }
+    max-width: 900px; } }
 
 .custom-logo-link img {
   /* display: inline-block; */
-  max-height: 160px;
+  max-height: 209pxpx;
   /* width: auto; */ }
 
 /* ------------  Gallery Styling  ------------ */
