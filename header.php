@@ -230,12 +230,12 @@ function scrollFunction() {
 				<?php } ?>
 		
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
-				<img id="logo" src="http://localhost/kimv_wp/wp-content/uploads/2019/05/kimv_logo-1.png">
+				<img id="logo" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/kimv_logo-1.png">
 				<a href="#responsive-menu" class="menu-link">&#9776;</a>
 				
-				<img id="instagram" src="http://localhost/kimv_wp/wp-content/uploads/2019/05/instagram.jpg">
-				<img id="telefon" src="http://localhost/kimv_wp/wp-content/uploads/2019/05/tlf.png">
-				<img id="teletext" src="http://localhost/kimv_wp/wp-content/uploads/2019/05/teletxt.png">
+				<img id="instagram" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/instagram.jpg">
+				<img id="telefon" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/tlf.png">
+				<img id="teletext" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/teletxt.png">
 				
             </nav>
 			

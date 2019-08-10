@@ -14,6 +14,20 @@
 
 get_header(); ?>
 
+<div id="mobile-header">
+
+<?php 
+
+     $image = get_field('image_one');
+
+     if( !empty($image) ): ?>
+
+         <img class="col-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+     <?php endif; ?>
+
+ </div>
+
 <style>
 .wrap {
 		max-width: 1404px;
@@ -90,7 +104,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-6 col-6-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <div class="add">
@@ -100,7 +114,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -109,7 +123,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -118,7 +132,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2 " src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -127,7 +141,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -136,7 +150,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 </div>
