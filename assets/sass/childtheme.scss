@@ -1,6 +1,10 @@
 $font-stack: "Open Sans",
 sans-serif;
 
+html {
+  margin-top: 0px !important;
+}
+
 body {
   font: 100% $font-stack;
   background: #fff;
@@ -57,7 +61,7 @@ img {
 
 @mixin heading-2 {
   @include heading;
-  font-size: 2.966em;
+  font-size: 1.966em;
 }
 
 @mixin heading-3 {
@@ -285,15 +289,24 @@ white;
     }
   }
 
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-landscape-up) {
+
     .col-6 {
       @include columnscolors;
       width: 50%;
     }
 
     .col-3 {
-      background-color: orange;
+      background-color: #f2f2f2;
       width: 25%;
+
+      @include odd() {
+        background: #e0e0e0;
+      }
+    }
+
+    .col-3-tablet {
+      width: 19.63%;
     }
 
     .col-4 {
@@ -302,7 +315,41 @@ white;
     }
 
     .col-8 {
-      background-color: navy;
+      width: 66.66667%;
+    }
+
+    .col-12 {
+      background-color: hsl(258, 71%, 43%);
+      width: 100%;
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+
+    .col-6 {
+      @include columnscolors;
+      width: 50%;
+    }
+
+    .col-3 {
+      background-color: #f2f2f2;
+      width: 25%;
+
+      @include odd() {
+        background: #e0e0e0;
+      }
+    }
+
+    .col-3-tablet {
+      width: 19.63%;
+    }
+
+    .col-4 {
+      background-color: lightcoral;
+      width: 33.33333%;
+    }
+
+    .col-8 {
       width: 66.66667%;
     }
 
@@ -313,6 +360,7 @@ white;
   }
 
   @include for-size(desktop-up) {
+
     .col-2 {
       width: auto;
       padding: 2%;
@@ -328,6 +376,7 @@ white;
     .col-3 {
       background-color: #f2f2f2;
       width: 25%;
+
 
       @include odd() {
         background: #e0e0e0;
@@ -353,6 +402,7 @@ white;
   }
 
   @include for-size(big-desktop-up) {
+
     .col-6 {
       background-color: Blue;
       width: 50%;
@@ -383,16 +433,161 @@ white;
 
 /* ------------  Responsive Grid Slut ------------ */
 
-#content {
-  padding: 0;
+/* ------------  Responsive Subjects ------------ */
+
+.col-2,
+.col-3,
+.col-3-tablet,
+.col-4,
+.col-6,
+.col-6-tablet,
+.col-8,
+.col-12,
+main,
+.container,
+.row,
+#primary {
+  z-index: 3;
+}
+
+.custom-header-media {}
+
+.site-header {
+  background-color: red;
+  position: relative;
+
+  @include for-size(phone-only) {
+    height: 253px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    height: 570px;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    height: auto;
+  }
+}
+
+#masthead .wrap {
+  position: relative;
+  text-align: center;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: -60%;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    margin-top: 0;
+  }
+}
+
+p {
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 0.76em;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    font-size: 0.76em;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 1em;
+  }
+
+}
+
+.col-3 {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    height: 280px;
+  }
+}
+
+.col-4 {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    height: 315px;
+  }
+}
+
+.col-6-tablet {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    height: 370px;
+  }
 }
 
 .r1 {
   position: absolute;
   width: 23%;
-  margin-top: 25%;
   margin-left: 28%;
+  z-index: 5;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 29%;
+  }
+
+  @include for-size(desktop-up) {
+    margin-top: 25%;
+  }
 }
+
+.p-unik {
+  padding-left: 18%;
+  padding-right: 5%;
+
+  @include for-size(tablet-portrait-up) {
+    padding-top: 2.5%;
+    padding-bottom: 2%;
+  }
+
+  @include for-size(desktop-up) {
+    padding-top: 4%;
+    padding-bottom: 3%;
+  }
+}
+
+.nav-menu ul {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    margin-top: -4px;
+  }
+}
+
+#logo {
+  width: 18%;
+  position: absolute;
+  margin-left: 2%;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: -9.6%;
+  }
+
+  @include for-size(desktop-up) {
+    margin-top: -7.6%;
+  }
+}
+
+.add {
+  margin: 0px auto;
+
+  @include for-size(tablet-portrait-up) {
+    width: 90%;
+  }
+
+  @include for-size(desktop-up) {
+    width: 83%;
+  }
+}
+
+#mobile-header {
+  @media screen and (min-width: 0px) {
+    display: none;
+  }
+}
+
+#content {
+  padding: 0;
+}
+
 
 hr {
   width: 10%;
@@ -409,13 +604,6 @@ hr {
   padding: 4%;
 }
 
-.p-unik {
-  padding-top: 4%;
-  padding-left: 18%;
-  padding-right: 5%;
-  padding-bottom: 3%;
-}
-
 .p-unik-2 {
   padding-top: 8%;
   padding-left: 4%;
@@ -429,19 +617,7 @@ hr {
   padding-bottom: 5%;
 }
 
-.add {
-  width: 83%;
-  margin: 0px auto;
-}
-
 /* ------------  Nav Icons  ------------ */
-
-#logo {
-  width: 18%;
-  margin-top: -7.6%;
-  position: absolute;
-  margin-left: 2%;
-}
 
 .custom-logo-link {
   display: block;
@@ -797,6 +973,7 @@ div.site-branding {
 
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 580px) {
+
   #primary-menu {
     padding: 20px 10px !important;
 
