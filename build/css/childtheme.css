@@ -46,7 +46,7 @@ h2 {
   margin-bottom: 0.35em;
   line-height: 1.2;
   color: inherit;
-  font-size: 2.966em; }
+  font-size: 1.966em; }
 
 h3 {
   margin-bottom: 0.35em;
@@ -134,6 +134,33 @@ div[class^="col-"] {
     background-color: #bdad20;
     width: 100%; } }
 
+@media (min-width: 900px) {
+  .row .col-6 {
+    width: 50%; }
+    .row .col-6 li:nth-child(4n+1) {
+      background: white; }
+    .row .col-6 li:nth-child(4n+2) {
+      background: white; }
+    .row .col-6 li:nth-child(4n+3) {
+      background: #333333; }
+    .row .col-6 li:nth-child(4n+4) {
+      background: white; }
+  .row .col-3 {
+    background-color: #f2f2f2;
+    width: 25%; }
+    .row .col-3:nth-child(odd) {
+      background: #e0e0e0; }
+  .row .col-3-tablet {
+    width: 19.63%; }
+  .row .col-4 {
+    background-color: lightcoral;
+    width: 33.33333%; }
+  .row .col-8 {
+    width: 66.66667%; }
+  .row .col-12 {
+    background-color: #4f20bc;
+    width: 100%; } }
+
 @media (min-width: 600px) {
   .row .col-6 {
     width: 50%; }
@@ -146,13 +173,16 @@ div[class^="col-"] {
     .row .col-6 li:nth-child(4n+4) {
       background: white; }
   .row .col-3 {
-    background-color: orange;
+    background-color: #f2f2f2;
     width: 25%; }
+    .row .col-3:nth-child(odd) {
+      background: #e0e0e0; }
+  .row .col-3-tablet {
+    width: 19.63%; }
   .row .col-4 {
     background-color: lightcoral;
     width: 33.33333%; }
   .row .col-8 {
-    background-color: navy;
     width: 66.66667%; }
   .row .col-12 {
     background-color: #4f20bc;
@@ -207,35 +237,296 @@ div[class^="col-"] {
     width: 100%; } }
 
 /* ------------  Responsive Grid Slut ------------ */
-@media screen and (max-width: 320px) {
-  .site-header {
-    display: none; } }
+/* ------------  Responsive Subjects ------------ */
+#plant_01 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 114% 10%;
+  background-size: 350px; }
 
-@media screen and (min-width: 600px) {
+#plant_02 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_02.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 118% 41%;
+  background-size: 559px; }
+
+#plant_03 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_03.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px; }
+
+#plant_04 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04-1.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px; }
+
+#plant_05 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_05-2.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px; }
+
+.col-2,
+.col-3,
+.col-3-tablet,
+.col-3-icons,
+.col-3-tablet-portrait,
+.col-4,
+.col-4-tablet-portrait,
+.col-6,
+.col-6-tablet-landscape,
+.col-6-tablet-portrait .col-8,
+.col-12,
+main,
+.container,
+.row,
+#primary,
+footer {
+  z-index: 3; }
+
+@media (min-width: 600px) {
+  .primary-navigation {
+    top: 1%;
+    z-index: 3; } }
+
+@media (min-width: 1200px) {
+  .primary-navigation {
+    margin-top: 1.8%; } }
+
+@media (min-width: 600px) {
+  a.menu-link {
+    background: #333;
+    width: 50px;
+    height: 50px; } }
+
+@media (min-width: 600px) {
+  .fa-lg {
+    margin-left: 10%;
+    margin-top: 52%;
+    font-size: 2em;
+    line-height: .75em;
+    vertical-align: -15%; } }
+
+.site-header {
+  position: relative;
+  z-index: 0; }
+  @media (max-width: 599px) {
+    .site-header {
+      height: 253px; } }
+  @media (min-width: 600px) {
+    .site-header {
+      height: 570px;
+      margin-top: -4%; } }
+  @media (min-width: 900px) {
+    .site-header {
+      height: auto; } }
+
+#masthead .wrap {
+  position: relative;
+  text-align: center; }
+  @media (min-width: 600px) {
+    #masthead .wrap {
+      margin-top: -50%; } }
+  @media (min-width: 900px) {
+    #masthead .wrap {
+      margin-top: 0; } }
+  @media (min-width: 1200px) {
+    #masthead .wrap {
+      margin-top: 0; } }
+
+@media (min-width: 600px) {
+  h2 {
+    font-size: 1.2em; } }
+
+@media (min-width: 1200px) {
+  h2 {
+    margin-bottom: 0.35em;
+    line-height: 1.2;
+    color: inherit;
+    font-size: 1.966em; } }
+
+@media (min-width: 600px) {
+  p {
+    font-size: 0.65em; } }
+
+@media (min-width: 900px) {
+  p {
+    font-size: 0.76em; } }
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 1em; } }
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .col-3 {
+    height: 280px; } }
+
+@media (min-width: 600px) {
+  .col-3-tablet-portrait {
+    height: 230px; } }
+
+@media (min-width: 1200px) {
+  .col-3-tablet-portrait {
+    height: auto; } }
+
+@media (min-width: 600px) {
+  .col-3-icons {
+    width: 19.5%; } }
+
+@media (min-width: 600px) {
+  .col-4-tablet-portrait {
+    height: 245px; } }
+
+@media (min-width: 1200px) {
+  .col-4-tablet-portrait {
+    height: auto; } }
+
+@media (min-width: 600px) {
+  .col-6-tablet-portrait {
+    height: 350px; } }
+
+@media (min-width: 1200px) {
+  .col-6-tablet-portrait {
+    height: auto; } }
+
+@media (min-width: 600px) {
+  .col-6-aaske {
+    height: 280px; } }
+
+@media (min-width: 1200px) {
+  .col-6-aaske {
+    height: auto; } }
+
+@media (min-width: 600px) {
+  .col-6-toform {
+    height: 400px; } }
+
+@media (min-width: 1200px) {
+  .col-6-toform {
+    height: auto; } }
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .col-4 {
+    height: 315px; } }
+
+.col-6-tablet-landscape {
+  z-index: 3000; }
+  @media (min-width: 900px) {
+    .col-6-tablet-landscape {
+      height: 370px; } }
+  @media (min-width: 1200px) {
+    .col-6-tablet-landscape {
+      height: auto; } }
+
+.produkt-tainer {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+  @media (min-width: 900px) {
+    .produkt-tainer {
+      padding-top: 3%; } }
+  @media (min-width: 600px) {
+    .produkt-tainer {
+      padding-top: 3%; } }
+  @media (min-width: 1200px) {
+    .produkt-tainer {
+      padding-top: 12%; } }
+
+.r1 {
+  position: absolute;
+  width: 23%;
+  margin-left: 28%;
+  z-index: 5; }
+  @media (min-width: 600px) {
+    .r1 {
+      margin-top: 29%; } }
+  @media (min-width: 1200px) {
+    .r1 {
+      margin-top: 25%; } }
+
+.p-unik {
+  padding-left: 18%;
+  padding-right: 5%; }
+  @media (min-width: 600px) {
+    .p-unik {
+      padding-top: 2.5%;
+      padding-bottom: 2%; } }
+  @media (min-width: 1200px) {
+    .p-unik {
+      padding-top: 4%;
+      padding-bottom: 3%; } }
+
+@media (min-width: 600px) {
+  .wpcf7-form {
+    width: 78%;
+    margin: 0 auto;
+    padding-left: 1%; } }
+
+@media (min-width: 1200px) {
+  .wpcf7-form {
+    width: 58%;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .nav-menu ul {
+    margin-top: -4px; } }
+
+#logo {
+  width: 18%;
+  position: absolute;
+  margin-left: 2%; }
+  @media (min-width: 600px) {
+    #logo {
+      margin-top: -9.6%; } }
+  @media (min-width: 1200px) {
+    #logo {
+      margin-top: -7.6%; } }
+
+.add {
+  margin: 0px auto; }
+  @media (min-width: 600px) {
+    .add {
+      width: 90%; } }
+  @media (min-width: 1200px) {
+    .add {
+      width: 83%;
+      height: 300px; } }
+
+@media screen and (min-width: 0px) {
   #mobile-header {
     display: none; } }
 
 #content {
   padding: 0; }
 
-.r1 {
-  position: absolute;
-  width: 23%;
-  margin-top: 25%;
-  margin-left: 28%; }
+#sb_instagram {
+  width: 100%;
+  background-color: #333333;
+  padding-bottom: 10px;
+  position: relative;
+  margin-top: -7%; }
+
+#sb_instagram:after {
+  content: "";
+  display: block;
+  margin-bottom: 2%; }
 
 hr {
   width: 10%;
-  background: #333; }
+  background: #333;
+  margin-left: auto;
+  margin-right: auto; }
 
 .p4 {
   padding: 4%; }
-
-.p-unik {
-  padding-top: 4%;
-  padding-left: 18%;
-  padding-right: 5%;
-  padding-bottom: 3%; }
 
 .p-unik-2 {
   padding-top: 8%;
@@ -248,17 +539,7 @@ hr {
   padding-right: 5%;
   padding-bottom: 5%; }
 
-.add {
-  width: 83%;
-  margin: 0px auto; }
-
 /* ------------  Nav Icons  ------------ */
-#logo {
-  width: 18%;
-  margin-top: -7.6%;
-  position: absolute;
-  margin-left: 2%; }
-
 .custom-logo-link {
   display: block;
   text-align: center; }
@@ -318,13 +599,6 @@ div.site-branding {
   padding-right: 5%;
   margin-bottom: 7%; }
 
-.produkt-tainer {
-  width: 75%;
-  padding-top: 3%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block; }
-
 .pg {
   padding-top: 0%; }
 
@@ -344,9 +618,7 @@ div.site-branding {
 .primary-navigation {
   z-index: 3000;
   position: absolute;
-  top: 0;
-  width: 100%;
-  margin-top: -2%; }
+  width: 100%; }
 
 .panel {
   position: fixed;
@@ -419,10 +691,6 @@ div.site-branding {
     display: none; }
   #teletext {
     display: none; }
-  .r1 {
-    display: none; }
-  .primary-navigation {
-    top: -23px; }
   .produkt-tainer {
     width: 100%; }
   #gallery-wrapper {
@@ -503,15 +771,12 @@ div.site-branding {
 @media only screen and (min-width: 1024px) {
   .slider,
   .slider-wrapper {
-    height: 480px; }
+    height: 335px; }
   .slide-caption {
     width: 65%;
     font-size: 1.5rem; } }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .slider,
-  .slider-wrapper {
-    height: 360px; }
   .slide-caption {
     width: 75%;
     font-size: 1.25rem; } }

@@ -61,7 +61,7 @@ img {
 
 @mixin heading-2 {
   @include heading;
-  font-size: 2.966em;
+  font-size: 1.966em;
 }
 
 @mixin heading-3 {
@@ -289,8 +289,7 @@ white;
     }
   }
 
-  @include for-size(tablet-portrait-up) {
-
+  @include for-size(tablet-landscape-up) {
 
     .col-6 {
       @include columnscolors;
@@ -298,8 +297,16 @@ white;
     }
 
     .col-3 {
-      background-color: orange;
+      background-color: #f2f2f2;
       width: 25%;
+
+      @include odd() {
+        background: #e0e0e0;
+      }
+    }
+
+    .col-3-tablet {
+      width: 19.63%;
     }
 
     .col-4 {
@@ -308,7 +315,41 @@ white;
     }
 
     .col-8 {
-      background-color: navy;
+      width: 66.66667%;
+    }
+
+    .col-12 {
+      background-color: hsl(258, 71%, 43%);
+      width: 100%;
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+
+    .col-6 {
+      @include columnscolors;
+      width: 50%;
+    }
+
+    .col-3 {
+      background-color: #f2f2f2;
+      width: 25%;
+
+      @include odd() {
+        background: #e0e0e0;
+      }
+    }
+
+    .col-3-tablet {
+      width: 19.63%;
+    }
+
+    .col-4 {
+      background-color: lightcoral;
+      width: 33.33333%;
+    }
+
+    .col-8 {
       width: 66.66667%;
     }
 
@@ -335,6 +376,7 @@ white;
     .col-3 {
       background-color: #f2f2f2;
       width: 25%;
+
 
       @include odd() {
         background: #e0e0e0;
@@ -391,14 +433,343 @@ white;
 
 /* ------------  Responsive Grid Slut ------------ */
 
+/* ------------  Responsive Subjects ------------ */
+
+
+#plant_01 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 114% 10%;
+  background-size: 350px;
+}
+
+
+#plant_02 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_02.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 118% 41%;
+  background-size: 559px;
+}
+
+#plant_03 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_03.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px;
+}
+
+#plant_04 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04-1.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px;
+}
+
+#plant_05 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_05-2.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px;
+}
+
+.col-2,
+.col-3,
+.col-3-tablet,
+.col-3-icons,
+.col-3-tablet-portrait,
+.col-4,
+.col-4-tablet-portrait,
+.col-6,
+.col-6-tablet-landscape,
+.col-6-tablet-portrait .col-8,
+.col-12,
+main,
+.container,
+.row,
+#primary,
+footer {
+  z-index: 3;
+}
+
+.site-seconds {
+  @include for-size(tablet-portrait-up) {}
+}
+
+.primary-navigation {
+  @include for-size(tablet-portrait-up) {
+    top: 1%;
+    z-index: 3;
+  }
+
+  @include for-size(desktop-up) {
+    margin-top: 1.8%;
+  }
+}
+
+a.menu-link {
+  @include for-size(tablet-portrait-up) {
+    background: #333;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.fa-lg {
+  @include for-size(tablet-portrait-up) {
+    margin-left: 10%;
+    margin-top: 52%;
+    font-size: 2em;
+    line-height: .75em;
+    vertical-align: -15%;
+  }
+}
+
+.custom-header-media {}
+
 .site-header {
-  @media screen and (max-width: 320px) {
-    display: none;
+  position: relative;
+  z-index: 0;
+
+  @include for-size(phone-only) {
+    height: 253px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    height: 570px;
+    margin-top: -4%;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    height: auto;
+  }
+}
+
+#masthead .wrap {
+  position: relative;
+  text-align: center;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: -50%;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    margin-top: 0;
+  }
+
+  @include for-size(desktop-up) {
+    margin-top: 0;
+  }
+}
+
+h2 {
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 1.2em;
+  }
+
+  @include for-size(desktop-up) {
+    @include heading-2;
+  }
+}
+
+p {
+  @include for-size(tablet-portrait-up) {
+    font-size: 0.65em;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    font-size: 0.76em;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 1em;
+  }
+
+}
+
+.col-3 {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    height: 280px;
+  }
+}
+
+
+.col-3-tablet-portrait {
+  @include for-size(tablet-portrait-up) {
+    height: 230px;
+  }
+
+  @include for-size(desktop-up) {
+    height: auto;
+  }
+}
+
+.col-3-icons {
+  @include for-size(tablet-portrait-up) {
+    width: 19.5%;
+  }
+}
+
+.col-4-tablet-portrait {
+  @include for-size(tablet-portrait-up) {
+    height: 245px;
+  }
+
+  @include for-size(desktop-up) {
+    height: auto;
+  }
+}
+
+.col-6-tablet-portrait {
+  @include for-size(tablet-portrait-up) {
+    height: 350px;
+  }
+
+  @include for-size(desktop-up) {
+    height: auto;
+  }
+}
+
+.col-6-aaske {
+  @include for-size(tablet-portrait-up) {
+    height: 280px;
+  }
+
+  @include for-size(desktop-up) {
+    height: auto;
+  }
+}
+
+.col-6-toform {
+  @include for-size(tablet-portrait-up) {
+    height: 400px;
+  }
+
+  @include for-size(desktop-up) {
+    height: auto;
+  }
+}
+
+.col-4 {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    height: 315px;
+  }
+}
+
+.col-6-tablet-landscape {
+  z-index: 3000;
+
+  @include for-size(tablet-landscape-up) {
+    height: 370px;
+  }
+
+  @include for-size(desktop-up) {
+    height: auto;
+  }
+}
+
+.produkt-tainer {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  @include for-size(tablet-landscape-up) {
+    padding-top: 3%;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    padding-top: 3%;
+  }
+
+  @include for-size(desktop-up) {
+    padding-top: 12%;
+  }
+}
+
+.r1 {
+  position: absolute;
+  width: 23%;
+  margin-left: 28%;
+  z-index: 5;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 29%;
+  }
+
+  @include for-size(desktop-up) {
+    margin-top: 25%;
+  }
+}
+
+.p-unik {
+  padding-left: 18%;
+  padding-right: 5%;
+
+  @include for-size(tablet-portrait-up) {
+    padding-top: 2.5%;
+    padding-bottom: 2%;
+  }
+
+  @include for-size(desktop-up) {
+    padding-top: 4%;
+    padding-bottom: 3%;
+  }
+}
+
+.wpcf7-form {
+  @include for-size(tablet-portrait-up) {
+    width: 78%;
+    margin: 0 auto;
+    padding-left: 1%;
+  }
+
+  @include for-size(desktop-up) {
+    width: 58%;
+    margin: 0 auto;
+  }
+}
+
+.nav-menu ul {
+  @media only screen and (min-width: 900px) and (max-width: 1200px) {
+    margin-top: -4px;
+  }
+}
+
+#logo {
+  width: 18%;
+  position: absolute;
+  margin-left: 2%;
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: -9.6%;
+  }
+
+  @include for-size(desktop-up) {
+    margin-top: -7.6%;
+  }
+}
+
+.add {
+  margin: 0px auto;
+
+  @include for-size(tablet-portrait-up) {
+    width: 90%;
+  }
+
+  @include for-size(desktop-up) {
+    width: 83%;
+    height: 300px;
   }
 }
 
 #mobile-header {
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 0px) {
     display: none;
   }
 }
@@ -407,16 +778,26 @@ white;
   padding: 0;
 }
 
-.r1 {
-  position: absolute;
-  width: 23%;
-  margin-top: 25%;
-  margin-left: 28%;
+#sb_instagram {
+  width: 100%;
+  background-color: #333333;
+  padding-bottom: 10px;
+  position: relative;
+  margin-top: -7%;
+}
+
+#sb_instagram:after {
+  content: "";
+  display: block;
+  margin-bottom: 2%
 }
 
 hr {
   width: 10%;
   background: #333;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 @mixin only() {
@@ -427,13 +808,6 @@ hr {
 
 .p4 {
   padding: 4%;
-}
-
-.p-unik {
-  padding-top: 4%;
-  padding-left: 18%;
-  padding-right: 5%;
-  padding-bottom: 3%;
 }
 
 .p-unik-2 {
@@ -449,19 +823,7 @@ hr {
   padding-bottom: 5%;
 }
 
-.add {
-  width: 83%;
-  margin: 0px auto;
-}
-
 /* ------------  Nav Icons  ------------ */
-
-#logo {
-  width: 18%;
-  margin-top: -7.6%;
-  position: absolute;
-  margin-left: 2%;
-}
 
 .custom-logo-link {
   display: block;
@@ -539,14 +901,6 @@ div.site-branding {
   margin-bottom: 7%;
 }
 
-.produkt-tainer {
-  width: 75%;
-  padding-top: 3%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 .pg {
   padding-top: 0%;
 }
@@ -571,9 +925,7 @@ div.site-branding {
 .primary-navigation {
   z-index: 3000;
   position: absolute;
-  top: 0;
   width: 100%;
-  margin-top: -2%;
 }
 
 .panel {
@@ -679,14 +1031,6 @@ div.site-branding {
     display: none;
   }
 
-  .r1 {
-    display: none;
-  }
-
-  .primary-navigation {
-    top: -23px;
-  }
-
   .produkt-tainer {
     width: 100%;
   }
@@ -786,7 +1130,7 @@ div.site-branding {
 
   .slider,
   .slider-wrapper {
-    height: 480px;
+    height: 335px;
   }
 
   .slide-caption {
@@ -797,10 +1141,10 @@ div.site-branding {
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
 
-  .slider,
-  .slider-wrapper {
-    height: 360px;
-  }
+  // .slider,
+  // .slider-wrapper {
+  //   height: 360px;
+  // }
 
   .slide-caption {
     width: 75%;
