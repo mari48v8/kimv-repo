@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+
 <div id="mobile-header">
 
 <?php 
@@ -40,14 +41,14 @@ get_header(); ?>
   
         <div class="container">
             <div class="row">
-                <div class="col-6 p4"><?php the_field('add_content'); ?></div>
+                <div class="col-6 p4" id="plant_01"><?php the_field('add_content'); ?></div>
                 <?php 
 
                 $image = get_field('image_one');
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-3 col-3-tablet-portrait" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -56,7 +57,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-3 col-3-tablet-portrait" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -65,7 +66,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-4" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-4 col-4-tablet-portrait" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -77,14 +78,14 @@ get_header(); ?>
                     <img class="r1" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
-                <div class="col-8 p-unik"> <?php the_field('add_content_two'); ?></div>
+                <div class="col-8 p-unik" id="plant_02"> <?php the_field('add_content_two'); ?></div>
                 <?php 
 
                 $image = get_field('image_four');
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-3 col-3-tablet-portrait" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -93,28 +94,31 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-3 col-3-tablet-portrait" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <div class="col-6 p4 bbg"><?php the_field('add_content_three'); ?></div>
-                <div class="col-6 p-unik-2"><?php the_field('add_content_four'); ?></div>
+                <div class="col-6 p-unik-2" id="plant_03"><?php the_field('add_content_four'); ?><button id="front-but"style="margin-top:3%;
+" onclick="window.location.href='http://dyrmosedesign.dk/kimvestergaard/om-mig'">Om mig</button></div>
+            
                 <?php 
 
                 $image = get_field('image_six');
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-6 col-6-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-6 col-6-tablet-landscape col-6-tablet-portrait" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
-                <div class="add">
+                <div id="plant_05"></div>
+                <div class="add" id="plant_04">
                <?php 
 
                 $image = get_field('image_add_one');
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2  col-3-icons" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -123,7 +127,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-icons" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -132,7 +136,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-icons" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -141,7 +145,7 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-icons" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
                 <?php 
@@ -150,12 +154,14 @@ get_header(); ?>
 
                 if( !empty($image) ): ?>
 
-                    <img class="col-2 col-3-tablet" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="col-2 col-3-icons" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php endif; ?>
+
+                <div id="folg">Følg mig her</div>
+                <div id="instaname">@kimvestergaard</div>
                 </div>
-                <div class="col-12"></div>
-                
+               
             </div> <!-- /row -->
         </div> <!-- /container -->
         <?php endwhile; ?>

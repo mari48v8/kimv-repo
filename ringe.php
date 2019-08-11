@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: KontaktPage
+Template Name: RingPage
 */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
@@ -219,19 +219,7 @@ function scrollFunction() {
  display:none; }
 
 #sb_instagram:after {
-    display:none; }
-    
-@media (max-width: 599px) {
-#main {
-margin-top: -2%; } }
-
-@media (max-width: 599px){
-.primary-navigation {
-    z-index: 4000;
-    margin-top: -3.7%;
-    position: absolute;
-}}
-
+	display:none; }
 </style>
 
 </head>
@@ -264,6 +252,9 @@ margin-top: -2%; } }
 				<img id="logo" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/kimv_logo-1.png">
 				<a href="#responsive-menu" class="menu-link"><i class="fa fa-bars fa-lg"></i></a>
 				
+				<img id="instagram" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/instagram.jpg">
+				<img id="telefon" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/tlf.png">
+				<img id="teletext" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/teletxt.png">
 				
             </nav>
 			
@@ -289,49 +280,33 @@ margin-top: -2%; } }
     width:100%;
     position:absolute;
 }
-
-#con_01{
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_12.png");
-  background-position:
-  0% 0%;
-  background-repeat: no-repeat;
-  background-size: 80%;
-}
-#con_02 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_09.png");
-  background-position: left -48px top -10px;
-    background-repeat: no-repeat;
-    background-size: 70%;}
+@media (max-width: 599px) {
+  #main {
+    margin-top: -14.1%;
+ } }
+        
+@media (max-width: 599px){
+.primary-navigation {
+    z-index: 4000;
+    margin-top: -0.5%;
+    position: absolute;
+}}
 </style>
 
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<?php while ( have_posts() ) : the_post(); ?>
-			
-			<div class="container">
-				<div class="row">
-				<div class="col-6 p-unik-3" id="con_01"><?php the_field('add_content'); ?></div>
+		<?php if (get_theme_mod('tawy-hiw-callout-display') == "Yes") { ?>
+			<div class="hiw-callout-image">
+			<img class="section-images" src="<?php echo wp_get_attachment_url(get_theme_mod('tawy-hiw-callout-image'))?>">
+			</div>
+		<?php } ?>
 
-					<?php 
-
-					$image = get_field('image_one');
-
-					if( !empty($image) ): ?>
-
-						<img class="col-6 col-6-toform" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-					<?php endif; ?>
-
-			
-					<div class="col-6" style="margin-top: 1%;"><?php the_field('add_content_two'); ?></div>
-
-				<div class="col-6" id="con_02" style="margin-bottom:4%;">
-				<img id="contact-img" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/kimv_logo-1.png">
-				<?php echo do_shortcode( '[contact-form-7 id="289" title="Contact form 1"]' ); ?></div>
-				</div> <!-- /row -->
-			</div> <!-- /container -->
-		<?php endwhile; ?>
+			<div id="gallery-wrapper">
+						<?php
+						if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '562' ); }
+						?>
+			</div>
 
     <?php
       // Get each of our panels and show the post data.

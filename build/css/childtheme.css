@@ -117,44 +117,33 @@ div[class^="col-"] {
   .row div[class^="col-"]:after {
     clear: both; }
 
-.row .col-9 {
-  width: 86%;
-  margin-bottom: 5%;
-  margin-left: auto;
-  margin-right: auto; }
-  @media (min-width: 1800px) {
-    .row .col-9 {
-      padding-bottom: 10%;
-      margin-bottom: 10%; } }
-
 @media (max-width: 599px) {
   .row .col-6 {
+    background-color: turquoise;
     width: 100%; }
-  .row .col-2 {
-    width: 50%;
-    float: left; }
   .row .col-3 {
-    background-color: #f2f2f2;
+    background-color: orangered;
     width: 50%; }
-    .row .col-3:nth-child(odd) {
-      background: #e0e0e0; }
   .row .col-4 {
+    background-color: darkkhaki;
     width: 100%; }
   .row .col-8 {
+    background-color: khaki;
     width: 100%; }
   .row .col-12 {
+    background-color: #bdad20;
     width: 100%; } }
 
 @media (min-width: 900px) {
   .row .col-6 {
     width: 50%; }
-    .row .col-6 li:nth-child(4n + 1) {
+    .row .col-6 li:nth-child(4n+1) {
       background: white; }
-    .row .col-6 li:nth-child(4n + 2) {
+    .row .col-6 li:nth-child(4n+2) {
       background: white; }
-    .row .col-6 li:nth-child(4n + 3) {
+    .row .col-6 li:nth-child(4n+3) {
       background: #333333; }
-    .row .col-6 li:nth-child(4n + 4) {
+    .row .col-6 li:nth-child(4n+4) {
       background: white; }
   .row .col-3 {
     background-color: #f2f2f2;
@@ -164,22 +153,24 @@ div[class^="col-"] {
   .row .col-3-tablet {
     width: 19.63%; }
   .row .col-4 {
+    background-color: lightcoral;
     width: 33.33333%; }
   .row .col-8 {
     width: 66.66667%; }
   .row .col-12 {
+    background-color: #4f20bc;
     width: 100%; } }
 
 @media (min-width: 600px) {
   .row .col-6 {
     width: 50%; }
-    .row .col-6 li:nth-child(4n + 1) {
+    .row .col-6 li:nth-child(4n+1) {
       background: white; }
-    .row .col-6 li:nth-child(4n + 2) {
+    .row .col-6 li:nth-child(4n+2) {
       background: white; }
-    .row .col-6 li:nth-child(4n + 3) {
+    .row .col-6 li:nth-child(4n+3) {
       background: #333333; }
-    .row .col-6 li:nth-child(4n + 4) {
+    .row .col-6 li:nth-child(4n+4) {
       background: white; }
   .row .col-3 {
     background-color: #f2f2f2;
@@ -189,26 +180,29 @@ div[class^="col-"] {
   .row .col-3-tablet {
     width: 19.63%; }
   .row .col-4 {
+    background-color: lightcoral;
     width: 33.33333%; }
   .row .col-8 {
     width: 66.66667%; }
   .row .col-12 {
+    background-color: #4f20bc;
     width: 100%; } }
 
 @media (min-width: 1200px) {
   .row .col-2 {
+    width: auto;
     padding: 2%;
-    margin-top: -2%;
+    margin-top: 2%;
     margin-bottom: 2%; }
   .row .col-6 {
     width: 50%; }
-    .row .col-6 li:nth-child(4n + 1) {
+    .row .col-6 li:nth-child(4n+1) {
       background: white; }
-    .row .col-6 li:nth-child(4n + 2) {
+    .row .col-6 li:nth-child(4n+2) {
       background: white; }
-    .row .col-6 li:nth-child(4n + 3) {
+    .row .col-6 li:nth-child(4n+3) {
       background: #333333; }
-    .row .col-6 li:nth-child(4n + 4) {
+    .row .col-6 li:nth-child(4n+4) {
       background: white; }
   .row .col-3 {
     background-color: #f2f2f2;
@@ -216,110 +210,68 @@ div[class^="col-"] {
     .row .col-3:nth-child(odd) {
       background: #e0e0e0; }
   .row .col-4 {
+    background-color: lightgreen;
     width: 33.33333%; }
   .row .col-8 {
     background-color: #fff;
     width: 66.66667%; }
   .row .col-12 {
+    background-color: #ee17ee;
     width: 100%; } }
 
 @media (min-width: 1800px) {
   .row .col-6 {
+    background-color: Blue;
     width: 50%; }
   .row .col-3 {
+    background-color: darkmagenta;
     width: 25%; }
   .row .col-4 {
+    background-color: red;
     width: 33.33333%; }
   .row .col-8 {
+    background-color: #20bb5c;
     width: 66.66667%; }
   .row .col-12 {
+    background-color: #bc4420;
     width: 100%; } }
 
 /* ------------  Responsive Grid Slut ------------ */
 /* ------------  Responsive Subjects ------------ */
 #plant_01 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04-2.png"), url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_01.png");
-  background-position: left top 30px, top right -50px;
-  background-repeat: no-repeat;
-  background-size: 70%, 40%; }
-
-#plant_02 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_03-1.png");
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04.png");
   object-fit: cover;
   background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: 400px; }
-
-#plant_03 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_09.png");
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-position: -7% 114%;
+  background-position: 114% 10%;
   background-size: 350px; }
 
+#plant_02 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_02.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 118% 41%;
+  background-size: 559px; }
+
+#plant_03 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_03.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px; }
+
 #plant_04 {
-  background-image: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_08.png"), url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_06.png"), url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_07.png");
-  background-position: bottom left, top right, left 250px bottom;
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04-1.png");
+  object-fit: cover;
   background-repeat: no-repeat;
-  background-size: contain, contain, contain; }
+  background-position: 16% 41%;
+  background-size: 559px; }
 
-.presse {
-  margin-top: -9%;
-  font-size: 1.2em; }
-
-#artikel {
-  background-image: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/skriftidendekim.png");
-  width: 50%;
-  margin: 0 auto;
+#plant_05 {
+  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_05-2.png");
+  object-fit: cover;
   background-repeat: no-repeat;
-  height: 100px;
-  background-size: contain; }
-  @media (max-width: 599px) {
-    #artikel {
-      margin-top: 13%;
-      height: 69px; } }
-  @media (min-width: 600px) {
-    #artikel {
-      height: 100px; } }
-
-#annonceblog {
-  background-image: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/annonckim.png");
-  width: 50%;
-  margin: 0 auto;
-  height: 100px;
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: contain; }
-  @media (max-width: 599px) {
-    #annonceblog {
-      margin-top: 13%;
-      margin-bottom: -79px; } }
-  @media (min-width: 900px) {
-    #annonceblog {
-      margin-top: 13%;
-      margin-bottom: -63px; } }
-  @media (min-width: 600px) {
-    #annonceblog {
-      margin-top: 19%;
-      margin-bottom: -63px; } }
-  @media (min-width: 1800px) {
-    #annonceblog {
-      margin-top: 10%;
-      margin-bottom: -63px; } }
-
-#frontmob {
-  background-image: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/bggpicture.jpg");
-  width: 101%;
-  height: 50%;
-  background-size: 101%; }
-
-@media (max-width: 599px) {
-  .custom-header {
-    display: none; } }
-
-@media (min-width: 600px) {
-  .custom-header {
-    display: block; } }
+  background-position: 16% 41%;
+  background-size: 559px; }
 
 .col-2,
 .col-3,
@@ -359,19 +311,15 @@ footer {
     margin-left: 10%;
     margin-top: 52%;
     font-size: 2em;
-    line-height: 0.75em;
+    line-height: .75em;
     vertical-align: -15%; } }
-
-.press_h2 {
-  text-align: center;
-  margin-top: 5%; }
-  @media (max-width: 599px) {
-    .press_h2 {
-      margin-bottom: 5%; } }
 
 .site-header {
   position: relative;
   z-index: 0; }
+  @media (max-width: 599px) {
+    .site-header {
+      height: 253px; } }
   @media (min-width: 600px) {
     .site-header {
       height: 570px;
@@ -420,10 +368,6 @@ footer {
   .col-3 {
     height: 280px; } }
 
-@media (max-width: 599px) {
-  .col-3-tablet-portrait {
-    height: 200px; } }
-
 @media (min-width: 600px) {
   .col-3-tablet-portrait {
     height: 230px; } }
@@ -432,41 +376,17 @@ footer {
   .col-3-tablet-portrait {
     height: auto; } }
 
-@media (max-width: 599px) {
-  .col-3-icons {
-    height: auto;
-    width: 24%; } }
-
-@media (min-width: 900px) {
-  .col-3-icons {
-    height: auto;
-    width: 24%; } }
-
 @media (min-width: 600px) {
   .col-3-icons {
-    height: auto;
-    width: 24%; } }
-
-@media (min-width: 1200px) {
-  .col-3-icons {
-    height: auto;
-    width: 24%; } }
-
-@media (max-width: 599px) {
-  .col-4-tablet-portrait {
-    height: 250px; } }
+    width: 19.5%; } }
 
 @media (min-width: 600px) {
   .col-4-tablet-portrait {
-    height: 260px; } }
+    height: 245px; } }
 
 @media (min-width: 1200px) {
   .col-4-tablet-portrait {
     height: auto; } }
-
-@media (max-width: 599px) {
-  .col-6-tablet-portrait {
-    height: 250px; } }
 
 @media (min-width: 600px) {
   .col-6-tablet-portrait {
@@ -476,10 +396,6 @@ footer {
   .col-6-tablet-portrait {
     height: auto; } }
 
-@media (max-width: 599px) {
-  .col-6-aaske {
-    height: 250px; } }
-
 @media (min-width: 600px) {
   .col-6-aaske {
     height: 280px; } }
@@ -487,10 +403,6 @@ footer {
 @media (min-width: 1200px) {
   .col-6-aaske {
     height: auto; } }
-
-@media (max-width: 599px) {
-  .col-6-toform {
-    height: 250px; } }
 
 @media (min-width: 600px) {
   .col-6-toform {
@@ -528,48 +440,29 @@ footer {
     .produkt-tainer {
       padding-top: 12%; } }
 
-@media (max-width: 599px) {
-  .r1 {
-    display: none; } }
+.r1 {
+  position: absolute;
+  width: 23%;
+  margin-left: 28%;
+  z-index: 5; }
+  @media (min-width: 600px) {
+    .r1 {
+      margin-top: 29%; } }
+  @media (min-width: 1200px) {
+    .r1 {
+      margin-top: 25%; } }
 
-@media (min-width: 600px) {
-  .r1 {
-    position: absolute;
-    width: 23%;
-    margin-left: 28%;
-    z-index: 5;
-    margin-top: 29%; } }
-
-@media (min-width: 1200px) {
-  .r1 {
-    position: absolute;
-    width: 23%;
-    margin-left: 28%;
-    z-index: 5;
-    margin-top: 25%; } }
-
-@media (max-width: 599px) {
-  .wpcf7-form {
-    width: 75%;
-    margin: 0 auto; } }
-
-@media (max-width: 599px) {
-  .p-unik {
-    padding: 10%; } }
-
-@media (min-width: 600px) {
-  .p-unik {
-    padding-left: 18%;
-    padding-right: 5%;
-    padding-top: 2.5%;
-    padding-bottom: 2%; } }
-
-@media (min-width: 1200px) {
-  .p-unik {
-    padding-left: 18%;
-    padding-right: 5%;
-    padding-top: 4%;
-    padding-bottom: 3%; } }
+.p-unik {
+  padding-left: 18%;
+  padding-right: 5%; }
+  @media (min-width: 600px) {
+    .p-unik {
+      padding-top: 2.5%;
+      padding-bottom: 2%; } }
+  @media (min-width: 1200px) {
+    .p-unik {
+      padding-top: 4%;
+      padding-bottom: 3%; } }
 
 @media (min-width: 600px) {
   .wpcf7-form {
@@ -602,9 +495,6 @@ footer {
   @media (min-width: 600px) {
     .add {
       width: 90%; } }
-  @media (min-width: 900px) {
-    .add {
-      height: 300px; } }
   @media (min-width: 1200px) {
     .add {
       width: 83%;
@@ -617,66 +507,17 @@ footer {
 #content {
   padding: 0; }
 
-#folg {
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em; }
-  @media (max-width: 599px) {
-    #folg {
-      margin-top: 77%; } }
-  @media (min-width: 600px) {
-    #folg {
-      margin-top: 0%; } }
-  @media (min-width: 900px) {
-    #folg {
-      padding-top: -6%; } }
-  @media (min-width: 1200px) {
-    #folg {
-      margin-top: -5%; } }
-
-#instaname {
-  width: 100%;
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: 600; }
-  @media (min-width: 600px) {
-    #instaname {
-      margin-top: 0%;
-      margin-bottom: 4%; } }
-  @media (min-width: 900px) {
-    #instaname {
-      padding-top: -6%; } }
-  @media (min-width: 1200px) {
-    #instaname {
-      margin-top: 0%; } }
-
 #sb_instagram {
   width: 100%;
+  background-color: #333333;
   padding-bottom: 10px;
-  position: relative; }
-  @media (min-width: 600px) {
-    #sb_instagram {
-      margin-top: 2.4%; } }
-  @media (min-width: 900px) {
-    #sb_instagram {
-      padding-top: -2.6%; } }
-  @media (min-width: 1200px) {
-    #sb_instagram {
-      margin-top: 2%; } }
+  position: relative;
+  margin-top: -7%; }
 
 #sb_instagram:after {
   content: "";
   display: block;
   margin-bottom: 2%; }
-
-#sbi_images {
-  width: 100%;
-  float: left;
-  line-height: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: -3%; }
 
 hr {
   width: 10%;
@@ -778,17 +619,6 @@ div.site-branding {
   z-index: 3000;
   position: absolute;
   width: 100%; }
-  @media (max-width: 599px) {
-    .primary-navigation {
-      margin-top: -75.5%; } }
-
-@media (max-width: 599px) {
-  #front-but {
-    margin-bottom: 15%; } }
-
-@media (max-width: 599px) {
-  #cv-but {
-    margin-bottom: 15%; } }
 
 .panel {
   position: fixed;
@@ -820,15 +650,6 @@ div.site-branding {
   border-radius: 4px;
   padding: 2px 12px;
   float: right; }
-  @media (max-width: 599px) {
-    .menu-link {
-      height: 34px;
-      width: 45px; } }
-
-@media (max-width: 599px) {
-  .fa-lg {
-    margin-left: 12%;
-    margin-top: 29%; } }
 
 .mobile-menu a {
   display: block;
@@ -894,7 +715,7 @@ div.site-branding {
   top: 0;
   z-index: 5000;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; }
+  transition: opacity .5s ease-in-out; }
 
 .slide-img {
   filter: brightness(50%);
@@ -939,7 +760,7 @@ div.site-branding {
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  transition: background-color 0.25s, color 0.25s ease-in-out; }
+  transition: background-color .25s, color .25s ease-in-out; }
 
 .slider-nav__label:hover,
 .slider-nav__label:active,

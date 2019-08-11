@@ -16,7 +16,7 @@
 
 		</div><!-- #content -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="" role="contentinfo">
 			<div class="wrap">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
@@ -39,7 +39,7 @@
 					<?php
 				endif;
 
-				get_template_part( 'template-parts/footer/site', 'info' );
+				get_template_part( 'template-parts/footer/site', 'none' );
 				?>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->

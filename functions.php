@@ -81,7 +81,7 @@ add_action('customize_register', 'frontpage_imgs_callout');
 
 function tawy_hiw_callout($wp_customize) {
     $wp_customize->add_section('tawy-hiw-callout-section', array(
-        'title' => 'How It Works Section'
+        'title' => 'Banner i Gallery'
     ));
 
     $wp_customize->add_setting('tawy-hiw-callout-display', array(
@@ -102,8 +102,8 @@ function tawy_hiw_callout($wp_customize) {
     'label' => 'Image',
     'section' => 'tawy-hiw-callout-section',
     'settings' => 'tawy-hiw-callout-image',
-    'width' => 1443, 
-    'height' => 680
+    'width' => 1645, 
+    'height' => 627
     )));
 }
 

@@ -19,6 +19,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <?php wp_head(); ?>
 
@@ -202,6 +204,69 @@ function scrollFunction() {
 }
 </script>
 
+<style>
+@media (min-width: 600px) {
+  .primary-navigation {
+    margin-top: 0%;
+ } }
+
+@media only screen and (min-width:992px) {
+.primary-navigation {
+    margin-top: 1.7%;
+}	
+} 
+@media only screen and (min-width: 1200px) {
+	.primary-navigation {
+	    margin-top: 2%;
+}
+} 
+.site-branding {
+  display:none;
+}
+@media (min-width: 600px) {
+  #main {
+	margin-top: 0%; } }
+
+@media (min-width: 900px) {
+  #main {
+	margin-top: 0%;} }
+
+@media (min-width: 1200px) {
+  #main {
+    margin-top: 0%;} }
+    
+
+#sb_instagram .sb_instagram_header {
+  display: none;
+}
+
+@media (max-width: 599px) {
+    .wp-custom-header {
+    display: none; }
+    .custom-header {
+    display: none; }
+    .custom-header-media {
+    display: none; }
+}
+
+.site-branding {
+display: none;
+}
+
+.site-header {
+  position: relative;
+  z-index: 0; }
+  @media (max-width: 599px) {
+    .site-header {
+      height: 521px;
+      background-color: none; } }
+
+
+      @media (max-width: 599px) {
+  #main {
+    margin-top: -52%; } }
+
+</style>
 
 </head>
 
@@ -215,9 +280,11 @@ function scrollFunction() {
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header site-seconds" role="banner">
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+        <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+        
+        <div id="frontmob"></div>
 
 		<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 
@@ -231,12 +298,11 @@ function scrollFunction() {
 		
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
 				<img id="logo" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/kimv_logo-1.png">
-				<a href="#responsive-menu" class="menu-link">&#9776;</a>
-				
-				<img id="instagram" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/instagram.jpg">
-				<img id="telefon" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/tlf.png">
-				<img id="teletext" src="http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/teletxt.png">
-				
+				<a href="#responsive-menu" class="menu-link"><i class="fa fa-bars fa-lg"></i></a>
+
+                <!-- <button id="button_head" onclick="window.location.href='http://dyrmosedesign.dk/kimvestergaard/om-mig'"><div id="instagram-icon"></div></button>
+                <button id="button_head" style="margin-left:1078px;" onclick="window.location.href='http://dyrmosedesign.dk/kimvestergaard/om-mig'"><div id="mail-icon"></div></button>
+				<div id="telefon-icon">+ 50 17 78 91</div> -->
             </nav>
 			
 

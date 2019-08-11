@@ -223,8 +223,8 @@ div[class^="col-"] {
 
 /* ------------  Responsive Grid  ------------ */
 
-$black: #000;
-$white: #fff;
+$black:#000;
+$white:#fff;
 
 .site-footer {
   background-color: $black;
@@ -238,7 +238,7 @@ white;
 
 @mixin columnscolors {
   @for $i from 1 through length($colors) {
-    li:nth-child(#{length($colors)}n + #{$i}) {
+    li:nth-child(#{length($colors)}n+#{$i}) {
       background: lighten(nth($colors, $i), 20%);
     }
   }
@@ -261,55 +261,36 @@ white;
     @include clearit;
   }
 
-  .col-9 {
-    width: 86%;
-    margin-bottom: 5%;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include for-size(tablet-landscape-up) {}
-
-    @include for-size(tablet-portrait-up) {}
-
-    @include for-size(big-desktop-up) {
-      padding-bottom: 10%;
-      margin-bottom: 10%;
-    }
-  }
-
   @include for-size(phone-only) {
+
     .col-6 {
+      background-color: turquoise;
       width: 100%;
     }
 
-    .col-2 {
-      width: 50%;
-      float: left;
-    }
-
     .col-3 {
-      background-color: #f2f2f2;
+      background-color: orangered;
       width: 50%;
-
-      @include odd() {
-        background: #e0e0e0;
-      }
     }
 
     .col-4 {
+      background-color: darkkhaki;
       width: 100%;
     }
 
     .col-8 {
+      background-color: khaki;
       width: 100%;
     }
 
     .col-12 {
+      background-color: #bdad20;
       width: 100%;
     }
   }
 
   @include for-size(tablet-landscape-up) {
+
     .col-6 {
       @include columnscolors;
       width: 50%;
@@ -329,6 +310,7 @@ white;
     }
 
     .col-4 {
+      background-color: lightcoral;
       width: 33.33333%;
     }
 
@@ -337,11 +319,13 @@ white;
     }
 
     .col-12 {
+      background-color: hsl(258, 71%, 43%);
       width: 100%;
     }
   }
 
   @include for-size(tablet-portrait-up) {
+
     .col-6 {
       @include columnscolors;
       width: 50%;
@@ -361,6 +345,7 @@ white;
     }
 
     .col-4 {
+      background-color: lightcoral;
       width: 33.33333%;
     }
 
@@ -369,14 +354,17 @@ white;
     }
 
     .col-12 {
+      background-color: hsl(258, 71%, 43%);
       width: 100%;
     }
   }
 
   @include for-size(desktop-up) {
+
     .col-2 {
+      width: auto;
       padding: 2%;
-      margin-top: -2%;
+      margin-top: 2%;
       margin-bottom: 2%;
     }
 
@@ -389,45 +377,57 @@ white;
       background-color: #f2f2f2;
       width: 25%;
 
+
       @include odd() {
         background: #e0e0e0;
       }
     }
 
     .col-4 {
+      background-color: lightgreen;
       width: 33.33333%;
     }
 
     .col-8 {
       background-color: $white;
       width: 66.66667%;
+
     }
 
     .col-12 {
+      background-color: #ee17ee;
       width: 100%;
     }
+
   }
 
   @include for-size(big-desktop-up) {
+
     .col-6 {
+      background-color: Blue;
       width: 50%;
     }
 
     .col-3 {
+      background-color: darkmagenta;
       width: 25%;
     }
 
     .col-4 {
+      background-color: red;
       width: 33.33333%;
     }
 
     .col-8 {
+      background-color: #20bb5c;
       width: 66.66667%;
     }
 
     .col-12 {
+      background-color: hsl(14, 71%, 43%);
       width: 100%;
     }
+
   }
 }
 
@@ -435,113 +435,46 @@ white;
 
 /* ------------  Responsive Subjects ------------ */
 
+
 #plant_01 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04-2.png"), url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_01.png');
-  background-position:
-    left top 30px, top right -50px;
-  background-repeat: no-repeat;
-  background-size: 70%, 40%;
-
-}
-
-#plant_02 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_03-1.png");
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04.png');
   object-fit: cover;
   background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: 400px;
-}
-
-#plant_03 {
-  background: url("http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_09.png");
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-position: -7% 114%;
+  background-position: 114% 10%;
   background-size: 350px;
 }
 
 
+#plant_02 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_02.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 118% 41%;
+  background-size: 559px;
+}
+
+#plant_03 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_03.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: 16% 41%;
+  background-size: 559px;
+}
+
 #plant_04 {
-  background-image:
-    url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_08.png'),
-    url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_06.png'),
-    url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_07.png');
-  background-position:
-    bottom left, top right, left 250px bottom;
-  background-repeat:
-    no-repeat;
-  background-size: contain, contain, contain;
-}
-
-.presse {
-  margin-top: -9%;
-  font-size: 1.2em;
-}
-
-#artikel {
-  background-image: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/skriftidendekim.png');
-  width: 50%;
-  margin: 0 auto;
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_04-1.png');
+  object-fit: cover;
   background-repeat: no-repeat;
-  height: 100px;
-  background-size: contain;
-
-  @include for-size(phone-only) {
-    margin-top: 13%;
-    height: 69px;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    height: 100px;
-  }
+  background-position: 16% 41%;
+  background-size: 559px;
 }
 
-#annonceblog {
-  background-image: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/annonckim.png');
-  width: 50%;
-  margin: 0 auto;
-  height: 100px;
+#plant_05 {
+  background: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/plant_05-2.png');
+  object-fit: cover;
   background-repeat: no-repeat;
-  position: relative;
-  background-size: contain;
-
-  @include for-size(phone-only) {
-    margin-top: 13%;
-    margin-bottom: -79px;
-  }
-
-  @include for-size(tablet-landscape-up) {
-    margin-top: 13%;
-    margin-bottom: -63px;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    margin-top: 19%;
-    margin-bottom: -63px;
-  }
-
-  @include for-size(big-desktop-up) {
-    margin-top: 10%;
-    margin-bottom: -63px;
-  }
-}
-
-#frontmob {
-  background-image: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/08/bggpicture.jpg');
-  width: 101%;
-  height: 50%;
-  background-size: 101%;
-}
-
-.custom-header {
-
-  @include for-size(phone-only) {
-    display: none;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    display: block;
-  }
+  background-position: 16% 41%;
+  background-size: 559px;
 }
 
 .col-2,
@@ -591,24 +524,20 @@ a.menu-link {
     margin-left: 10%;
     margin-top: 52%;
     font-size: 2em;
-    line-height: 0.75em;
+    line-height: .75em;
     vertical-align: -15%;
   }
 }
 
-.press_h2 {
-  text-align: center;
-  margin-top: 5%;
-
-  @include for-size(phone-only) {
-    margin-bottom: 5%;
-  }
-
-}
+.custom-header-media {}
 
 .site-header {
   position: relative;
   z-index: 0;
+
+  @include for-size(phone-only) {
+    height: 253px;
+  }
 
   @include for-size(tablet-portrait-up) {
     height: 570px;
@@ -638,6 +567,7 @@ a.menu-link {
 }
 
 h2 {
+
   @include for-size(tablet-portrait-up) {
     font-size: 1.2em;
   }
@@ -659,6 +589,7 @@ p {
   @include for-size(desktop-up) {
     font-size: 1em;
   }
+
 }
 
 .col-3 {
@@ -667,11 +598,8 @@ p {
   }
 }
 
-.col-3-tablet-portrait {
-  @include for-size(phone-only) {
-    height: 200px;
-  }
 
+.col-3-tablet-portrait {
   @include for-size(tablet-portrait-up) {
     height: 230px;
   }
@@ -682,35 +610,14 @@ p {
 }
 
 .col-3-icons {
-  @include for-size(phone-only) {
-    height: auto;
-    width: 24%;
-  }
-
-  @include for-size(tablet-landscape-up) {
-    height: auto;
-    width: 24%;
-  }
-
   @include for-size(tablet-portrait-up) {
-    height: auto;
-    width: 24%;
-  }
-
-  @include for-size(desktop-up) {
-    height: auto;
-    width: 24%;
+    width: 19.5%;
   }
 }
 
 .col-4-tablet-portrait {
-
-  @include for-size(phone-only) {
-    height: 250px;
-  }
-
   @include for-size(tablet-portrait-up) {
-    height: 260px;
+    height: 245px;
   }
 
   @include for-size(desktop-up) {
@@ -719,11 +626,6 @@ p {
 }
 
 .col-6-tablet-portrait {
-
-  @include for-size(phone-only) {
-    height: 250px;
-  }
-
   @include for-size(tablet-portrait-up) {
     height: 350px;
   }
@@ -734,11 +636,6 @@ p {
 }
 
 .col-6-aaske {
-
-  @include for-size(phone-only) {
-    height: 250px;
-  }
-
   @include for-size(tablet-portrait-up) {
     height: 280px;
   }
@@ -749,11 +646,6 @@ p {
 }
 
 .col-6-toform {
-
-  @include for-size(phone-only) {
-    height: 250px;
-  }
-
   @include for-size(tablet-portrait-up) {
     height: 400px;
   }
@@ -801,51 +693,30 @@ p {
 }
 
 .r1 {
-  @include for-size(phone-only) {
-    display: none;
-  }
+  position: absolute;
+  width: 23%;
+  margin-left: 28%;
+  z-index: 5;
 
   @include for-size(tablet-portrait-up) {
-    position: absolute;
-    width: 23%;
-    margin-left: 28%;
-    z-index: 5;
     margin-top: 29%;
   }
 
   @include for-size(desktop-up) {
-    position: absolute;
-    width: 23%;
-    margin-left: 28%;
-    z-index: 5;
     margin-top: 25%;
   }
 }
 
-.wpcf7-form {
-  @include for-size(phone-only) {
-    width: 75%;
-    margin: 0 auto;
-  }
-
-}
-
 .p-unik {
-
-  @include for-size(phone-only) {
-    padding: 10%;
-  }
+  padding-left: 18%;
+  padding-right: 5%;
 
   @include for-size(tablet-portrait-up) {
-    padding-left: 18%;
-    padding-right: 5%;
     padding-top: 2.5%;
     padding-bottom: 2%;
   }
 
   @include for-size(desktop-up) {
-    padding-left: 18%;
-    padding-right: 5%;
     padding-top: 4%;
     padding-bottom: 3%;
   }
@@ -891,10 +762,6 @@ p {
     width: 90%;
   }
 
-  @include for-size(tablet-landscape-up) {
-    height: 300px;
-  }
-
   @include for-size(desktop-up) {
     width: 83%;
     height: 300px;
@@ -911,163 +778,18 @@ p {
   padding: 0;
 }
 
-#folg {
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-
-  @include for-size(phone-only) {
-    margin-top: 77%;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    margin-top: 0%;
-  }
-
-  @include for-size(tablet-landscape-up) {
-    padding-top: -6%;
-  }
-
-  @include for-size(desktop-up) {
-    margin-top: -5%;
-  }
-}
-
-// #button_head {
-//   background-color: Transparent;
-//   background-repeat: no-repeat;
-//   border: none;
-//   cursor: pointer;
-//   overflow: hidden;
-//   outline: none;
-//   position: absolute;
-
-
-//   @include for-size(tablet-portrait-up) {
-//     margin-top: -7.35%;
-//     margin-left: 1026px;
-//   }
-
-//   @include for-size(tablet-landscape-up) {
-//     margin-top: -7.35%;
-//     margin-left: 1026px;
-//   }
-
-//   @include for-size(desktop-up) {
-//     margin-top: -7.35%;
-//     margin-left: 1026px;
-//   }
-// }
-
-// #instagram-icon {
-//   background-image: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/06/instagram-logo.png');
-//   width: 28px;
-//   height: 28px;
-//   background-size: contain;
-
-//   @include for-size(phone-only) {
-//     display: none;
-//   }
-// }
-
-// #mail-icon {
-//   background-image: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/05/mail.png');
-//   width: 28px;
-//   height: 28px;
-//   background-size: contain;
-
-//   @include for-size(phone-only) {
-//     display: none;
-//   }
-// }
-
-// #telefon-icon {
-//   background-image: url('http://dyrmosedesign.dk/kimvestergaard/wp-content/uploads/2019/06/phone.png');
-//   width: auto;
-//   height: 28px;
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   font-weight: 600;
-
-//   @include for-size(phone-only) {
-//     display: none;
-//   }
-
-//   @include for-size(tablet-portrait-up) {
-//     margin-left: 1160px;
-//     padding-left: 1%;
-//     margin-top: -6.4%;
-//   }
-
-//   @include for-size(tablet-landscape-up) {
-//     margin-left: 1160px;
-//     padding-left: 1%;
-//     margin-top: -6.4%;
-//   }
-
-//   @include for-size(desktop-up) {
-//     margin-left: 1160px;
-//     padding-left: 1%;
-//     margin-top: -6.4%;
-//   }
-
-// }
-
-#instaname {
-  width: 100%;
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: 600;
-
-  @include for-size(tablet-portrait-up) {
-    margin-top: 0%;
-    margin-bottom: 4%;
-  }
-
-  @include for-size(tablet-landscape-up) {
-    padding-top: -6%;
-  }
-
-  @include for-size(desktop-up) {
-    margin-top: 0%;
-  }
-}
-
-
 #sb_instagram {
   width: 100%;
+  background-color: #333333;
   padding-bottom: 10px;
   position: relative;
-
-  @include for-size(tablet-portrait-up) {
-    margin-top: 2.4%;
-
-  }
-
-  @include for-size(tablet-landscape-up) {
-    padding-top: -2.6%;
-  }
-
-  @include for-size(desktop-up) {
-    margin-top: 2%;
-  }
-
+  margin-top: -7%;
 }
 
 #sb_instagram:after {
   content: "";
   display: block;
-  margin-bottom: 2%;
-}
-
-#sbi_images {
-  width: 100%;
-  float: left;
-  line-height: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: -3%;
+  margin-bottom: 2%
 }
 
 hr {
@@ -1075,6 +797,7 @@ hr {
   background: #333;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 @mixin only() {
@@ -1142,10 +865,13 @@ div.site-branding {
   font-weight: 600;
 }
 
+
+
 @media screen and (min-width: 48em) {
   .custom-logo-link img {
     max-width: 900px;
   }
+
 }
 
 .custom-logo-link img {
@@ -1184,6 +910,7 @@ div.site-branding {
   padding-right: 7%;
   padding-bottom: 5%;
   width: 70%;
+
 }
 
 #metaslider_container_471 {
@@ -1199,22 +926,6 @@ div.site-branding {
   z-index: 3000;
   position: absolute;
   width: 100%;
-
-  @include for-size(phone-only) {
-    margin-top: -75.5%;
-  }
-}
-
-#front-but {
-  @include for-size(phone-only) {
-    margin-bottom: 15%;
-  }
-}
-
-#cv-but {
-  @include for-size(phone-only) {
-    margin-bottom: 15%;
-  }
 }
 
 .panel {
@@ -1252,18 +963,6 @@ div.site-branding {
   border-radius: 4px;
   padding: 2px 12px;
   float: right;
-
-  @include for-size(phone-only) {
-    height: 34px;
-    width: 45px;
-  }
-}
-
-.fa-lg {
-  @include for-size(phone-only) {
-    margin-left: 12%;
-    margin-top: 29%;
-  }
 }
 
 .mobile-menu a {
@@ -1281,7 +980,8 @@ div.site-branding {
   list-style: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width:900px) {
+
   #primary-menu {
     display: none;
   }
@@ -1338,9 +1038,11 @@ div.site-branding {
   #gallery-wrapper {
     width: 100%;
   }
+
 }
 
 /* ------------  Contact Form 7 Styling /kimv_wp/wp-content/plugins/contact-form-7/includes/css/styles.css ------------ */
+
 
 .trigger {
   display: none;
@@ -1362,7 +1064,7 @@ div.site-branding {
   top: 0;
   z-index: 5000;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 
 .slide-img {
@@ -1414,7 +1116,7 @@ div.site-branding {
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  transition: background-color 0.25s, color 0.25s ease-in-out;
+  transition: background-color .25s, color .25s ease-in-out;
 }
 
 .slider-nav__label:hover,
@@ -1438,6 +1140,7 @@ div.site-branding {
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
+
   // .slider,
   // .slider-wrapper {
   //   height: 360px;
@@ -1458,6 +1161,7 @@ div.site-branding {
 
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 580px) {
+
   #primary-menu {
     padding: 20px 10px !important;
 
